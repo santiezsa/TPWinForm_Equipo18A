@@ -30,25 +30,25 @@ namespace WinForms
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAgregar ventana = new frmAgregar();
-            ventana.Show();
+            ventana.ShowDialog();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmModificar ventana = new frmModificar();
-            ventana.Show();
+            ventana.ShowDialog();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEliminar ventana = new frmEliminar();
-            ventana.Show();
+            ventana.ShowDialog();
         }
 
         private void verArtículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVerArticulo ventana = new frmVerArticulo();
-            ventana.Show();
+            ventana.ShowDialog();
         }
 
         private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,14 +64,14 @@ namespace WinForms
         private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMarcas ventana = new frmMarcas();
-            ventana.Show();
+            ventana.ShowDialog();
 
         }
 
         private void categoríasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCategorias ventana = new frmCategorias();
-            ventana.Show();
+            ventana.ShowDialog();
         }
     }
 }

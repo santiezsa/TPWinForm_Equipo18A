@@ -16,5 +16,120 @@ namespace WinForms
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAgregarCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAgregarDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labAgregarDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAgregarPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAgregarPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labAgregarImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExaminarImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbAtributosArt_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labAgregarMarca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAgregarMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAgregarCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarCargaArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grboxVistaPreviaImg_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grboxImagenArt_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCargarArt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

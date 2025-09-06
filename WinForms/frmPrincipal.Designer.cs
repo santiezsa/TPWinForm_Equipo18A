@@ -125,7 +125,7 @@
             // 
             // tablaArticulos
             // 
-            this.tablaArticulos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tablaArticulos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -227,6 +227,7 @@
             this.btnVerArticulo.Name = "btnVerArticulo";
             this.btnVerArticulo.Size = new System.Drawing.Size(23, 22);
             this.btnVerArticulo.Text = "Ver";
+            this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
             // 
             // toolStripSeparator1
             // 

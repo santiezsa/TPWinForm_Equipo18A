@@ -73,5 +73,32 @@ namespace WinForms
             frmCategorias ventana = new frmCategorias();
             ventana.ShowDialog();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmAgregar ventana = new frmAgregar();
+            ventana.ShowDialog();
+        }
+
+        private void tablaArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            if (tablaArticulos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un artículo para modificar.");
+                return;
+            }
+            else
+            {
+                // Abre ventana para modificar el articulo
+                frmModificar ventana = new frmModificar();
+                ventana.ShowDialog();
+                return;
+            }
+        }
     }
 }

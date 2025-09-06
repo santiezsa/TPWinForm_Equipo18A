@@ -40,23 +40,23 @@
             this.labAgregarImagen = new System.Windows.Forms.Label();
             this.btnExaminarImagen = new System.Windows.Forms.Button();
             this.grboxMarca_Categoria = new System.Windows.Forms.GroupBox();
-            this.grbAtributosArt = new System.Windows.Forms.GroupBox();
+            this.comboBoxAgregarCategoria = new System.Windows.Forms.ComboBox();
+            this.comboBoxAgregarMarca = new System.Windows.Forms.ComboBox();
             this.labAgregarMarca = new System.Windows.Forms.Label();
             this.labCategoria = new System.Windows.Forms.Label();
-            this.comboBoxAgregarMarca = new System.Windows.Forms.ComboBox();
-            this.comboBoxAgregarCategoria = new System.Windows.Forms.ComboBox();
+            this.grbAtributosArt = new System.Windows.Forms.GroupBox();
+            this.grboxImagenArt = new System.Windows.Forms.GroupBox();
             this.btnCargarImagen = new System.Windows.Forms.Button();
             this.picBoxArt = new System.Windows.Forms.PictureBox();
             this.btnCargarArt = new System.Windows.Forms.Button();
             this.btnCancelarCargaArt = new System.Windows.Forms.Button();
             this.grboxVistaPreviaImg = new System.Windows.Forms.GroupBox();
-            this.grboxImagenArt = new System.Windows.Forms.GroupBox();
             this.grboxDetalleArt.SuspendLayout();
             this.grboxMarca_Categoria.SuspendLayout();
             this.grbAtributosArt.SuspendLayout();
+            this.grboxImagenArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).BeginInit();
             this.grboxVistaPreviaImg.SuspendLayout();
-            this.grboxImagenArt.SuspendLayout();
             this.SuspendLayout();
             // 
             // labAgregarCodigo
@@ -79,6 +79,7 @@
             this.tbxAgregarCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxAgregarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAgregarCodigo.Location = new System.Drawing.Point(124, 33);
             this.tbxAgregarCodigo.Name = "tbxAgregarCodigo";
             this.tbxAgregarCodigo.Size = new System.Drawing.Size(237, 20);
@@ -90,6 +91,7 @@
             this.tbxAgregarNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxAgregarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAgregarNombre.Location = new System.Drawing.Point(124, 139);
             this.tbxAgregarNombre.Name = "tbxAgregarNombre";
             this.tbxAgregarNombre.Size = new System.Drawing.Size(237, 20);
@@ -116,6 +118,7 @@
             this.tbxAgregarDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxAgregarDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAgregarDescripcion.Location = new System.Drawing.Point(124, 192);
             this.tbxAgregarDescripcion.Name = "tbxAgregarDescripcion";
             this.tbxAgregarDescripcion.Size = new System.Drawing.Size(237, 20);
@@ -157,6 +160,7 @@
             this.tbxAgregarPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxAgregarPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAgregarPrecio.Location = new System.Drawing.Point(124, 89);
             this.tbxAgregarPrecio.Name = "tbxAgregarPrecio";
             this.tbxAgregarPrecio.Size = new System.Drawing.Size(237, 20);
@@ -232,21 +236,31 @@
             this.grboxMarca_Categoria.Text = "Marca y Categoría";
             this.grboxMarca_Categoria.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
-            // grbAtributosArt
+            // comboBoxAgregarCategoria
             // 
-            this.grbAtributosArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.comboBoxAgregarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbAtributosArt.Controls.Add(this.grboxImagenArt);
-            this.grbAtributosArt.Controls.Add(this.grboxMarca_Categoria);
-            this.grbAtributosArt.Controls.Add(this.grboxDetalleArt);
-            this.grbAtributosArt.Location = new System.Drawing.Point(9, 12);
-            this.grbAtributosArt.Name = "grbAtributosArt";
-            this.grbAtributosArt.Size = new System.Drawing.Size(383, 711);
-            this.grbAtributosArt.TabIndex = 11;
-            this.grbAtributosArt.TabStop = false;
-            this.grbAtributosArt.Text = "Atributos del artículo";
-            this.grbAtributosArt.Enter += new System.EventHandler(this.grbAtributosArt_Enter);
+            this.comboBoxAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAgregarCategoria.FormattingEnabled = true;
+            this.comboBoxAgregarCategoria.Location = new System.Drawing.Point(124, 90);
+            this.comboBoxAgregarCategoria.Name = "comboBoxAgregarCategoria";
+            this.comboBoxAgregarCategoria.Size = new System.Drawing.Size(237, 21);
+            this.comboBoxAgregarCategoria.TabIndex = 1;
+            this.comboBoxAgregarCategoria.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarCategoria_SelectedIndexChanged);
+            // 
+            // comboBoxAgregarMarca
+            // 
+            this.comboBoxAgregarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAgregarMarca.FormattingEnabled = true;
+            this.comboBoxAgregarMarca.Location = new System.Drawing.Point(124, 34);
+            this.comboBoxAgregarMarca.Name = "comboBoxAgregarMarca";
+            this.comboBoxAgregarMarca.Size = new System.Drawing.Size(237, 21);
+            this.comboBoxAgregarMarca.TabIndex = 0;
+            this.comboBoxAgregarMarca.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarMarca_SelectedIndexChanged);
             // 
             // labAgregarMarca
             // 
@@ -278,29 +292,38 @@
             this.labCategoria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labCategoria.Click += new System.EventHandler(this.labCategoria_Click);
             // 
-            // comboBoxAgregarMarca
+            // grbAtributosArt
             // 
-            this.comboBoxAgregarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grbAtributosArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxAgregarMarca.FormattingEnabled = true;
-            this.comboBoxAgregarMarca.Location = new System.Drawing.Point(124, 34);
-            this.comboBoxAgregarMarca.Name = "comboBoxAgregarMarca";
-            this.comboBoxAgregarMarca.Size = new System.Drawing.Size(237, 21);
-            this.comboBoxAgregarMarca.TabIndex = 0;
-            this.comboBoxAgregarMarca.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarMarca_SelectedIndexChanged);
+            this.grbAtributosArt.Controls.Add(this.grboxImagenArt);
+            this.grbAtributosArt.Controls.Add(this.grboxMarca_Categoria);
+            this.grbAtributosArt.Controls.Add(this.grboxDetalleArt);
+            this.grbAtributosArt.Location = new System.Drawing.Point(9, 12);
+            this.grbAtributosArt.Name = "grbAtributosArt";
+            this.grbAtributosArt.Size = new System.Drawing.Size(383, 711);
+            this.grbAtributosArt.TabIndex = 11;
+            this.grbAtributosArt.TabStop = false;
+            this.grbAtributosArt.Text = "Atributos del artículo";
+            this.grbAtributosArt.Enter += new System.EventHandler(this.grbAtributosArt_Enter);
             // 
-            // comboBoxAgregarCategoria
+            // grboxImagenArt
             // 
-            this.comboBoxAgregarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grboxImagenArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxAgregarCategoria.FormattingEnabled = true;
-            this.comboBoxAgregarCategoria.Location = new System.Drawing.Point(124, 90);
-            this.comboBoxAgregarCategoria.Name = "comboBoxAgregarCategoria";
-            this.comboBoxAgregarCategoria.Size = new System.Drawing.Size(237, 21);
-            this.comboBoxAgregarCategoria.TabIndex = 1;
-            this.comboBoxAgregarCategoria.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarCategoria_SelectedIndexChanged);
+            this.grboxImagenArt.Controls.Add(this.btnCargarImagen);
+            this.grboxImagenArt.Controls.Add(this.labAgregarImagen);
+            this.grboxImagenArt.Controls.Add(this.btnExaminarImagen);
+            this.grboxImagenArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grboxImagenArt.Location = new System.Drawing.Point(0, 377);
+            this.grboxImagenArt.Name = "grboxImagenArt";
+            this.grboxImagenArt.Size = new System.Drawing.Size(383, 334);
+            this.grboxImagenArt.TabIndex = 12;
+            this.grboxImagenArt.TabStop = false;
+            this.grboxImagenArt.Text = "Imagen del artículo";
+            this.grboxImagenArt.Enter += new System.EventHandler(this.grboxImagenArt_Enter);
             // 
             // btnCargarImagen
             // 
@@ -373,23 +396,6 @@
             this.grboxVistaPreviaImg.Text = "Vista previa";
             this.grboxVistaPreviaImg.Enter += new System.EventHandler(this.grboxVistaPreviaImg_Enter);
             // 
-            // grboxImagenArt
-            // 
-            this.grboxImagenArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grboxImagenArt.Controls.Add(this.btnCargarImagen);
-            this.grboxImagenArt.Controls.Add(this.labAgregarImagen);
-            this.grboxImagenArt.Controls.Add(this.btnExaminarImagen);
-            this.grboxImagenArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grboxImagenArt.Location = new System.Drawing.Point(0, 377);
-            this.grboxImagenArt.Name = "grboxImagenArt";
-            this.grboxImagenArt.Size = new System.Drawing.Size(383, 334);
-            this.grboxImagenArt.TabIndex = 12;
-            this.grboxImagenArt.TabStop = false;
-            this.grboxImagenArt.Text = "Imagen del artículo";
-            this.grboxImagenArt.Enter += new System.EventHandler(this.grboxImagenArt_Enter);
-            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,10 +419,10 @@
             this.grboxMarca_Categoria.ResumeLayout(false);
             this.grboxMarca_Categoria.PerformLayout();
             this.grbAtributosArt.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).EndInit();
-            this.grboxVistaPreviaImg.ResumeLayout(false);
             this.grboxImagenArt.ResumeLayout(false);
             this.grboxImagenArt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).EndInit();
+            this.grboxVistaPreviaImg.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -16,5 +16,10 @@ namespace WinForms
         {
             InitializeComponent();
         }
+
+        private void tablaArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

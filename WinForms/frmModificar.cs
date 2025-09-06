@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace WinForms
 {
-    public partial class frmArticulos : Form
+    public partial class frmModificar : Form
     {
-        public frmArticulos()
+        public frmModificar()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmArticulos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

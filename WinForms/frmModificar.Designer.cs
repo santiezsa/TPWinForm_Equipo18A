@@ -195,7 +195,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxModificarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModificarCategoria.FormattingEnabled = true;
-            this.comboBoxModificarCategoria.Location = new System.Drawing.Point(124, 81);
+            this.comboBoxModificarCategoria.Location = new System.Drawing.Point(124, 76);
             this.comboBoxModificarCategoria.Name = "comboBoxModificarCategoria";
             this.comboBoxModificarCategoria.Size = new System.Drawing.Size(237, 21);
             this.comboBoxModificarCategoria.TabIndex = 1;
@@ -233,7 +233,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labCategoria.AutoSize = true;
             this.labCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCategoria.Location = new System.Drawing.Point(21, 80);
+            this.labCategoria.Location = new System.Drawing.Point(21, 75);
             this.labCategoria.Name = "labCategoria";
             this.labCategoria.Size = new System.Drawing.Size(86, 18);
             this.labCategoria.TabIndex = 10;
@@ -367,6 +367,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelarModificacionArt.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancelarModificacionArt.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelarModificacionArt.Location = new System.Drawing.Point(210, 734);
             this.btnCancelarModificacionArt.Name = "btnCancelarModificacionArt";
             this.btnCancelarModificacionArt.Size = new System.Drawing.Size(108, 45);

@@ -243,7 +243,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAgregarCategoria.FormattingEnabled = true;
-            this.comboBoxAgregarCategoria.Location = new System.Drawing.Point(124, 90);
+            this.comboBoxAgregarCategoria.Location = new System.Drawing.Point(124, 81);
             this.comboBoxAgregarCategoria.Name = "comboBoxAgregarCategoria";
             this.comboBoxAgregarCategoria.Size = new System.Drawing.Size(237, 21);
             this.comboBoxAgregarCategoria.TabIndex = 1;
@@ -284,7 +284,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labCategoria.AutoSize = true;
             this.labCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCategoria.Location = new System.Drawing.Point(21, 94);
+            this.labCategoria.Location = new System.Drawing.Point(21, 82);
             this.labCategoria.Name = "labCategoria";
             this.labCategoria.Size = new System.Drawing.Size(86, 18);
             this.labCategoria.TabIndex = 10;

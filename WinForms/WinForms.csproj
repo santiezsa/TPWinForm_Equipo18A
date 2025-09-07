@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias.cs" />
+    <Compile Include="urlImagen.cs" />
     <Compile Include="frmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +90,8 @@
     <Compile Include="frmVerArticulo.Designer.cs">
       <DependentUpon>frmVerArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Articulo.cs" />
+    <Compile Include="Marcas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregar.resx">

@@ -24,7 +24,8 @@ namespace WinForms
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = negocio.listar();
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,18 +49,18 @@ namespace WinForms
         private void verArtículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            if (tablaArticulos.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar un artículo para ver.");
-                return;
-            }
-            else
-            {
-                // Abre ventana para ver el articulo
-                frmVerArticulo ventana = new frmVerArticulo();
-                ventana.ShowDialog();
-                return;
-            }
+            //if (tablaArticulos.SelectedRows.Count == 0)
+            //{
+            //    MessageBox.Show("Debe seleccionar un artículo para ver.");
+            //    return;
+            //}
+            //else
+            //{
+            //    // Abre ventana para ver el articulo
+            //    frmVerArticulo ventana = new frmVerArticulo();
+            //    ventana.ShowDialog();
+            //    return;
+            //}
         }
 
         private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -98,34 +99,40 @@ namespace WinForms
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
-            if (tablaArticulos.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar un artículo para modificar.");
-                return;
-            }
-            else
-            {
-                // Abre ventana para modificar el articulo
-                frmModificar ventana = new frmModificar();
-                ventana.ShowDialog();
-                return;
-            }
+            //if (tablaArticulos.SelectedRows.Count == 0)
+            //{
+            //    MessageBox.Show("Debe seleccionar un artículo para modificar.");
+            //    return;
+            //}
+            //else
+            //{
+            //    // Abre ventana para modificar el articulo
+            //    frmModificar ventana = new frmModificar();
+            //    ventana.ShowDialog();
+            //    return;
+            //}
         }
 
         private void btnVerArticulo_Click(object sender, EventArgs e)
         {
-            if(tablaArticulos.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar un artículo para ver.");
-                return;
-            }
-            else
-            {
-                // Abre ventana para ver el articulo
-                frmVerArticulo ventana = new frmVerArticulo();
-                ventana.ShowDialog();
-                return;
-            }
+            //if(tablaArticulos.SelectedRows.Count == 0)
+            //{
+            //    MessageBox.Show("Debe seleccionar un artículo para ver.");
+            //    return;
+            //}
+            //else
+            //{
+            //    // Abre ventana para ver el articulo
+            //    frmVerArticulo ventana = new frmVerArticulo();
+            //    ventana.ShowDialog();
+            //    return;
+            //}
         }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

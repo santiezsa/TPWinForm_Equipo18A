@@ -16,5 +16,15 @@ namespace WinForms
         {
             InitializeComponent();
         }
+
+        private void frmMarcas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

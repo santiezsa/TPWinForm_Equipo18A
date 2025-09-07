@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="Articulo.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="MarcasNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregar.resx">

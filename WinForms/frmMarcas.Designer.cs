@@ -29,23 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMarcas));
-            this.grbAdmMarcas = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnAgregarMarca = new System.Windows.Forms.ToolStripButton();
             this.btnModificarMarca = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminarMarca = new System.Windows.Forms.ToolStripButton();
+            this.grbAdmMarcas = new System.Windows.Forms.GroupBox();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
+            this.grbAdmMarcas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grbAdmMarcas
-            // 
-            this.grbAdmMarcas.Location = new System.Drawing.Point(13, 49);
-            this.grbAdmMarcas.Name = "grbAdmMarcas";
-            this.grbAdmMarcas.Size = new System.Drawing.Size(267, 415);
-            this.grbAdmMarcas.TabIndex = 1;
-            this.grbAdmMarcas.TabStop = false;
-            this.grbAdmMarcas.Text = "Marcas";
             // 
             // toolStrip1
             // 
@@ -94,6 +88,25 @@
             this.btnEliminarMarca.Text = "toolStripButton3";
             this.btnEliminarMarca.ToolTipText = "Eliminar";
             // 
+            // grbAdmMarcas
+            // 
+            this.grbAdmMarcas.Controls.Add(this.dgvMarcas);
+            this.grbAdmMarcas.Location = new System.Drawing.Point(13, 49);
+            this.grbAdmMarcas.Name = "grbAdmMarcas";
+            this.grbAdmMarcas.Size = new System.Drawing.Size(267, 415);
+            this.grbAdmMarcas.TabIndex = 1;
+            this.grbAdmMarcas.TabStop = false;
+            this.grbAdmMarcas.Text = "Marcas";
+            // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(7, 33);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.Size = new System.Drawing.Size(254, 189);
+            this.dgvMarcas.TabIndex = 0;
+            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // frmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,17 +119,20 @@
             this.Load += new System.EventHandler(this.frmMarcas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.grbAdmMarcas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox grbAdmMarcas;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnAgregarMarca;
         private System.Windows.Forms.ToolStripButton btnModificarMarca;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnEliminarMarca;
+        private System.Windows.Forms.GroupBox grbAdmMarcas;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }

@@ -16,5 +16,6 @@ namespace WinForms
         public Categoria Categoria { get; set; }
         public decimal Precio { get; set; }
         public List <Imagen> Imagenes { get; set; }
+
     }
 }

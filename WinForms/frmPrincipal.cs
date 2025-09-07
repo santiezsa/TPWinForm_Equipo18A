@@ -99,18 +99,7 @@ namespace WinForms
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
-            //if (tablaArticulos.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("Debe seleccionar un artículo para modificar.");
-            //    return;
-            //}
-            //else
-            //{
-            //    // Abre ventana para modificar el articulo
-            //    frmModificar ventana = new frmModificar();
-            //    ventana.ShowDialog();
-            //    return;
-            //}
+
         }
 
         private void btnVerArticulo_Click(object sender, EventArgs e)

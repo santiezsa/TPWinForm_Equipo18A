@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriasNegocio.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="frmCategorias.cs">
       <SubType>Form</SubType>
@@ -98,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregar.resx">
       <DependentUpon>frmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminar.resx">
       <DependentUpon>frmEliminar.cs</DependentUpon>

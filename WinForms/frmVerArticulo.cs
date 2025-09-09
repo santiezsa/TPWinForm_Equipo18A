@@ -20,6 +20,7 @@ namespace WinForms
 
         // Objeto articulo para mostrar
         private Articulo articuloSeleccionado;
+        private int indiceImagenActual = 0; // indice para navegar entre imagenes
 
         // Genero constructor que reciba un articulo a mostrar
         public frmVerArticulo(Articulo articulo)
@@ -59,6 +60,26 @@ namespace WinForms
             {
                 picBoxArtVer.Load("https://www.rubymaejewelry.com/wp-content/uploads/2010/07/placeholder.jpg");
             }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            // Si hay mas de una imagen
+            if (articuloSeleccionado.Imagenes.Count > 1)
+            {
+                indiceImagenActual--;
+                if (indiceImagenActual < 0)
+                {
+                    indiceImagenActual = articuloSeleccionado.Imagenes.Count - 1; // Vuelve a la ultima imagen
+                }
+                cargarImagen(articuloSeleccionado.Imagenes[indiceImagenActual].Url);
+                  
+            }
+        }
+
+        private void btnAdelante_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

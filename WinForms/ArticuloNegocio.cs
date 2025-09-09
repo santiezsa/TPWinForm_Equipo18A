@@ -31,7 +31,7 @@ namespace WinForms
                 conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
                 
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria\r\nfrom ARTICULOS A, MARCAS M,\tCATEGORIAS C\r\nWHERE A.IdMarca = M.Id\r\nand C.Id = A.IdCategoria";
+                comando.CommandText = "SELECT\r\n    A.Id,\r\n    Codigo,\r\n    Nombre,\r\n    A.Descripcion,\r\n    Precio,\r\n    M.Id AS IdMarca,          \r\n    M.Descripcion AS Marca,\r\n    C.Id AS IdCategoria,      \r\n    C.Descripcion AS Categoria\r\nFROM\r\n    ARTICULOS A, MARCAS M, CATEGORIAS C\r\nWHERE\r\n    A.IdMarca = M.Id\r\n    AND C.Id = A.IdCategoria";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -40,15 +40,24 @@ namespace WinForms
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
+                    // Datos basicos
                     aux.Id = (int)lector["Id"];
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Precio = (decimal)lector["Precio"];
+
+                    // Datos de marca
                     aux.Marca = new Marca();
+                    aux.Marca.Id = (int)lector["IdMarca"]; // traigo ID de marca para modificar/eliminar
                     aux.Marca.Descripcion = (string)lector["Marca"];
+
+                    // Datos de categoria
                     aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)lector["IdCategoria"]; // traigo ID de categoria para modificar/eliminar
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
+
+                    // Imagenes
                     aux.Imagenes = this.listarImagenes(aux.Id);
 
                     lista.Add(aux);

@@ -44,8 +44,10 @@
             this.tbxVerMarca = new System.Windows.Forms.TextBox();
             this.labVerImagen = new System.Windows.Forms.Label();
             this.grboxImagenArt = new System.Windows.Forms.GroupBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.picBoxArtVer = new System.Windows.Forms.PictureBox();
             this.grbVerAtributosArt = new System.Windows.Forms.GroupBox();
+            this.btnAdelante = new System.Windows.Forms.Button();
             this.grboxDetalleVerArt.SuspendLayout();
             this.grboxMarca_Categoria.SuspendLayout();
             this.grboxImagenArt.SuspendLayout();
@@ -271,10 +273,20 @@
             this.grboxImagenArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grboxImagenArt.Location = new System.Drawing.Point(0, 377);
             this.grboxImagenArt.Name = "grboxImagenArt";
-            this.grboxImagenArt.Size = new System.Drawing.Size(383, 390);
+            this.grboxImagenArt.Size = new System.Drawing.Size(383, 334);
             this.grboxImagenArt.TabIndex = 12;
             this.grboxImagenArt.TabStop = false;
             this.grboxImagenArt.Text = "Imagen del artículo";
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(109, 734);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(68, 31);
+            this.btnAtras.TabIndex = 13;
+            this.btnAtras.Text = "🢀";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // picBoxArtVer
             // 
@@ -284,7 +296,7 @@
             this.picBoxArtVer.BackColor = System.Drawing.Color.Silver;
             this.picBoxArtVer.Location = new System.Drawing.Point(24, 64);
             this.picBoxArtVer.Name = "picBoxArtVer";
-            this.picBoxArtVer.Size = new System.Drawing.Size(322, 264);
+            this.picBoxArtVer.Size = new System.Drawing.Size(322, 248);
             this.picBoxArtVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxArtVer.TabIndex = 12;
             this.picBoxArtVer.TabStop = false;
@@ -304,11 +316,23 @@
             this.grbVerAtributosArt.TabStop = false;
             this.grbVerAtributosArt.Text = "Ver detalles del artículo";
             // 
+            // btnAdelante
+            // 
+            this.btnAdelante.Location = new System.Drawing.Point(204, 734);
+            this.btnAdelante.Name = "btnAdelante";
+            this.btnAdelante.Size = new System.Drawing.Size(68, 31);
+            this.btnAdelante.TabIndex = 22;
+            this.btnAdelante.Text = "🢂";
+            this.btnAdelante.UseVisualStyleBackColor = true;
+            this.btnAdelante.Click += new System.EventHandler(this.btnAdelante_Click);
+            // 
             // frmVerArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 796);
+            this.Controls.Add(this.btnAdelante);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.grbVerAtributosArt);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(432, 835);
@@ -350,5 +374,7 @@
         private System.Windows.Forms.GroupBox grbVerAtributosArt;
         private System.Windows.Forms.TextBox tbxVerCategoria;
         private System.Windows.Forms.TextBox tbxVerMarca;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnAdelante;
     }
 }

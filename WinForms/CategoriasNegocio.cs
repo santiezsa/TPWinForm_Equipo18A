@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinForms
 {
-    internal class CategoriasNegocio
+    public class CategoriasNegocio
     {
         public List<Categoria> listar()
         {
@@ -24,10 +24,10 @@ namespace WinForms
             try
             {
                 // Descomentar si usan Windows Authentication
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                //conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
 
                 // Usando Docker
-                //conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
+                conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
 
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select Id, Descripcion from Categorias";

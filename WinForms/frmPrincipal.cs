@@ -104,18 +104,21 @@ namespace WinForms
 
         private void btnVerArticulo_Click(object sender, EventArgs e)
         {
-            //if(tablaArticulos.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("Debe seleccionar un artículo para ver.");
-            //    return;
-            //}
-            //else
-            //{
-            //    // Abre ventana para ver el articulo
-            //    frmVerArticulo ventana = new frmVerArticulo();
-            //    ventana.ShowDialog();
-            //    return;
-            //}
+            if (dgvArticulos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un artículo para ver.");
+                return;
+            }
+            else
+            {
+                // Obtengo el objeto Articulo de la fila seleccionada por el usuario
+                Articulo articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+                // Abre ventana para ver el articulo y le paso el objeto obtenido
+                frmVerArticulo ventana = new frmVerArticulo(articuloSeleccionado);
+                ventana.ShowDialog();
+                return;
+            }
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -25,10 +25,10 @@ namespace WinForms
             try
             {
                 // Descomentar si usan Windows Authentication
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                //conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 
                 // Usando Docker
-                //conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
+                conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
                 
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Descripcion Marca, C.Descripcion Categoria\r\nfrom ARTICULOS A, MARCAS M,\tCATEGORIAS C\r\nWHERE A.IdMarca = M.Id\r\nand C.Id = A.IdCategoria";

@@ -40,17 +40,17 @@
             this.labVerMarca = new System.Windows.Forms.Label();
             this.labVerCategoria = new System.Windows.Forms.Label();
             this.grboxMarca_Categoria = new System.Windows.Forms.GroupBox();
+            this.tbxVerCategoria = new System.Windows.Forms.TextBox();
+            this.tbxVerMarca = new System.Windows.Forms.TextBox();
             this.labVerImagen = new System.Windows.Forms.Label();
             this.grboxImagenArt = new System.Windows.Forms.GroupBox();
-            this.grbVerAtributosArt = new System.Windows.Forms.GroupBox();
             this.picBoxArtVer = new System.Windows.Forms.PictureBox();
-            this.tbxVerMarca = new System.Windows.Forms.TextBox();
-            this.tbxVerCategoria = new System.Windows.Forms.TextBox();
+            this.grbVerAtributosArt = new System.Windows.Forms.GroupBox();
             this.grboxDetalleVerArt.SuspendLayout();
             this.grboxMarca_Categoria.SuspendLayout();
             this.grboxImagenArt.SuspendLayout();
-            this.grbVerAtributosArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArtVer)).BeginInit();
+            this.grbVerAtributosArt.SuspendLayout();
             this.SuspendLayout();
             // 
             // labVerCodigo
@@ -223,6 +223,30 @@
             this.grboxMarca_Categoria.TabStop = false;
             this.grboxMarca_Categoria.Text = "Marca y Categoría";
             // 
+            // tbxVerCategoria
+            // 
+            this.tbxVerCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxVerCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxVerCategoria.Location = new System.Drawing.Point(124, 81);
+            this.tbxVerCategoria.Name = "tbxVerCategoria";
+            this.tbxVerCategoria.ReadOnly = true;
+            this.tbxVerCategoria.Size = new System.Drawing.Size(237, 20);
+            this.tbxVerCategoria.TabIndex = 11;
+            // 
+            // tbxVerMarca
+            // 
+            this.tbxVerMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxVerMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxVerMarca.Location = new System.Drawing.Point(124, 38);
+            this.tbxVerMarca.Name = "tbxVerMarca";
+            this.tbxVerMarca.ReadOnly = true;
+            this.tbxVerMarca.Size = new System.Drawing.Size(237, 20);
+            this.tbxVerMarca.TabIndex = 7;
+            // 
             // labVerImagen
             // 
             this.labVerImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -252,6 +276,19 @@
             this.grboxImagenArt.TabStop = false;
             this.grboxImagenArt.Text = "Imagen del artículo";
             // 
+            // picBoxArtVer
+            // 
+            this.picBoxArtVer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBoxArtVer.BackColor = System.Drawing.Color.Silver;
+            this.picBoxArtVer.Location = new System.Drawing.Point(24, 64);
+            this.picBoxArtVer.Name = "picBoxArtVer";
+            this.picBoxArtVer.Size = new System.Drawing.Size(322, 264);
+            this.picBoxArtVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxArtVer.TabIndex = 12;
+            this.picBoxArtVer.TabStop = false;
+            // 
             // grbVerAtributosArt
             // 
             this.grbVerAtributosArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -266,42 +303,6 @@
             this.grbVerAtributosArt.TabIndex = 21;
             this.grbVerAtributosArt.TabStop = false;
             this.grbVerAtributosArt.Text = "Ver detalles del artículo";
-            // 
-            // picBoxArtVer
-            // 
-            this.picBoxArtVer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxArtVer.BackColor = System.Drawing.Color.Silver;
-            this.picBoxArtVer.Location = new System.Drawing.Point(24, 64);
-            this.picBoxArtVer.Name = "picBoxArtVer";
-            this.picBoxArtVer.Size = new System.Drawing.Size(322, 264);
-            this.picBoxArtVer.TabIndex = 12;
-            this.picBoxArtVer.TabStop = false;
-            // 
-            // tbxVerMarca
-            // 
-            this.tbxVerMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxVerMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxVerMarca.Location = new System.Drawing.Point(124, 38);
-            this.tbxVerMarca.Name = "tbxVerMarca";
-            this.tbxVerMarca.ReadOnly = true;
-            this.tbxVerMarca.Size = new System.Drawing.Size(237, 20);
-            this.tbxVerMarca.TabIndex = 7;
-            // 
-            // tbxVerCategoria
-            // 
-            this.tbxVerCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxVerCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxVerCategoria.Location = new System.Drawing.Point(124, 81);
-            this.tbxVerCategoria.Name = "tbxVerCategoria";
-            this.tbxVerCategoria.ReadOnly = true;
-            this.tbxVerCategoria.Size = new System.Drawing.Size(237, 20);
-            this.tbxVerCategoria.TabIndex = 11;
             // 
             // frmVerArticulo
             // 
@@ -323,8 +324,8 @@
             this.grboxMarca_Categoria.PerformLayout();
             this.grboxImagenArt.ResumeLayout(false);
             this.grboxImagenArt.PerformLayout();
-            this.grbVerAtributosArt.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArtVer)).EndInit();
+            this.grbVerAtributosArt.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

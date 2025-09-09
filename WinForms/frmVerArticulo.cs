@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,8 +30,8 @@ namespace WinForms
 
         private void frmVerArticulo_Load(object sender, EventArgs e)
         {
-            
-            if(articuloSeleccionado != null)
+
+            if (articuloSeleccionado != null)
             {
                 tbxVerCodigo.Text = articuloSeleccionado.Codigo;
                 tbxVerNombre.Text = articuloSeleccionado.Nombre;
@@ -43,10 +44,21 @@ namespace WinForms
                 // Precio
                 tbxVerPrecio.Text = articuloSeleccionado.Precio.ToString();
 
-                // TODO: Agregar varias imagenes
-
+                // Ver varias imagenes o una imagen "placerholder" si no tiene imagen en la base
+                cargarImagen(articuloSeleccionado.Imagenes.Count > 0 ? articuloSeleccionado.Imagenes[0].Url : "");
             }
+        }
 
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                picBoxArtVer.Load(imagen);
+            }
+            catch (Exception)
+            {
+                picBoxArtVer.Load("https://www.rubymaejewelry.com/wp-content/uploads/2010/07/placeholder.jpg");
+            }
         }
     }
 }

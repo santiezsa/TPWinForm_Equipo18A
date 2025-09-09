@@ -49,7 +49,46 @@ namespace WinForms
                     aux.Marca.Descripcion = (string)lector["Marca"];
                     aux.Categoria = new Categoria();
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
+                    aux.Imagenes = this.listarImagenes(aux.Id);
 
+                    lista.Add(aux);
+                }
+                conexion.Close();
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Imagen> listarImagenes(int idArticulo)
+        {
+            List<Imagen> lista = new List<Imagen>();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            try
+            {
+                // Descomentar si usan Windows Authentication
+                //conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                
+                // Usando Docker
+                conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT ImagenUrl FROM IMAGENES WHERE IdArticulo = @IdArticulo";
+                comando.Parameters.AddWithValue("@IdArticulo", idArticulo);
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    Imagen aux = new Imagen();
+                    //aux.Id = (int)lector["Id"];
+                    //aux.IdArticulo = (int)lector["IdArticulo"];
+                    aux.Url = (string)lector["ImagenUrl"];
                     lista.Add(aux);
                 }
                 conexion.Close();

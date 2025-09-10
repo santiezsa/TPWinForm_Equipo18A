@@ -5,8 +5,9 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dominio;
 
-namespace WinForms
+namespace negocio
 {
     public class ArticuloNegocio
     {
@@ -31,7 +32,7 @@ namespace WinForms
                 conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
                 
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT\r\n    A.Id,\r\n    Codigo,\r\n    Nombre,\r\n    A.Descripcion,\r\n    Precio,\r\n    M.Id AS IdMarca,          \r\n    M.Descripcion AS Marca,\r\n    C.Id AS IdCategoria,      \r\n    C.Descripcion AS Categoria\r\nFROM\r\n    ARTICULOS A, MARCAS M, CATEGORIAS C\r\nWHERE\r\n    A.IdMarca = M.Id\r\n    AND C.Id = A.IdCategoria";
+                comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, Precio, M.Id AS IdMarca, M.Descripcion AS Marca, C.Id AS IdCategoria, C.Descripcion AS Categoria FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND C.Id = A.IdCategoria";
                 comando.Connection = conexion;
 
                 conexion.Open();

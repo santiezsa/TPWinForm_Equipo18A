@@ -4,15 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dominio;
 
-namespace WinForms
+namespace negocio
 {
-    internal class MarcasNegocio
+    public class CategoriasNegocio
     {
-        public List<Marca> listar()
+        public List<Categoria> listar()
         {
-            // Lista de marcas
-            List<Marca> lista = new List<Marca>();
+            // Lista de categorias
+            List<Categoria> lista = new List<Categoria>();
             // Conexion con la base de datos
             SqlConnection conexion = new SqlConnection();
             // Ejecutar comandos en la base de datos
@@ -30,7 +31,7 @@ namespace WinForms
                 conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
 
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Id, Descripcion from Marcas";
+                comando.CommandText = "select Id, Descripcion from Categorias";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -38,10 +39,10 @@ namespace WinForms
 
                 while (lector.Read())
                 {
-                    Marca aux = new Marca();
+                    Categoria aux = new Categoria();
                     aux.Id = (int)lector["Id"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    
+
                     lista.Add(aux);
                 }
                 conexion.Close();

@@ -92,7 +92,6 @@ namespace WinForms
         {
             frmAgregar ventana = new frmAgregar();
             ventana.ShowDialog();
-
         }
 
         private void tablaArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -144,6 +144,28 @@ namespace WinForms
 
         private void btnCargarArt_Click(object sender, EventArgs e)
         {
+            Articulo articulo = new Articulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                articulo.Codigo = tbxAgregarCodigo.Text;
+                articulo.Precio = decimal.Parse(tbxAgregarPrecio.Text);
+                articulo.Nombre = tbxAgregarNombre.Text;
+                articulo.Descripcion = tbxAgregarDescripcion.Text;
+                articulo.Marca = (Marca)comboBoxAgregarArtMarca.SelectedItem;
+                articulo.Categoria = (Categoria)comboBoxAgregarArtCategoria.SelectedItem;
+
+                // TODO: Falta agregar este metodo en ArticuloNegocio
+                negocio.agregar(articulo);
+                MessageBox.Show("Articulo agregado exitosamente.");
+                Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
         }
 

@@ -91,5 +91,11 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        // INSERT DE DATOS SIMPLES Y CON CATEGORIAS Y MARCAS
+        public void agregar(Articulo articulo)
+        {
+
+        }
     }
 }

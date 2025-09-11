@@ -14,43 +14,29 @@ namespace negocio
         {
             // Lista de marcas
             List<Marca> lista = new List<Marca>();
-            // Conexion con la base de datos
-            SqlConnection conexion = new SqlConnection();
-            // Ejecutar comandos en la base de datos
-            SqlCommand comando = new SqlCommand();
-            // Leer lo que devuelve la base de datos
-            SqlDataReader lector;
-
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                // Descomentar si usan Windows Authentication
-                //conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
+                datos.ejecutarLectura();
 
-                // Usando Docker
-                conexion.ConnectionString = "server=localhost; database=CATALOGO_P3_DB; user id=sa; password=BaseDeDatos#2";
-
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Id, Descripcion from Marcas";
-                comando.Connection = conexion;
-
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                while (lector.Read())
+                while(datos.Lector.Read())
                 {
                     Marca aux = new Marca();
-                    aux.Id = (int)lector["Id"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
                     lista.Add(aux);
                 }
-                conexion.Close();
                 return lista;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

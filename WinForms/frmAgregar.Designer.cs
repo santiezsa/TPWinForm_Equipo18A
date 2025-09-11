@@ -40,8 +40,8 @@
             this.labAgregarImagen = new System.Windows.Forms.Label();
             this.btnExaminarImagen = new System.Windows.Forms.Button();
             this.grboxMarca_Categoria = new System.Windows.Forms.GroupBox();
-            this.comboBoxAgregarCategoria = new System.Windows.Forms.ComboBox();
-            this.comboBoxAgregarMarca = new System.Windows.Forms.ComboBox();
+            this.comboBoxAgregarArtCategoria = new System.Windows.Forms.ComboBox();
+            this.comboBoxAgregarArtMarca = new System.Windows.Forms.ComboBox();
             this.labAgregarMarca = new System.Windows.Forms.Label();
             this.labCategoria = new System.Windows.Forms.Label();
             this.grbAtributosArt = new System.Windows.Forms.GroupBox();
@@ -223,8 +223,8 @@
             this.grboxMarca_Categoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grboxMarca_Categoria.Controls.Add(this.comboBoxAgregarCategoria);
-            this.grboxMarca_Categoria.Controls.Add(this.comboBoxAgregarMarca);
+            this.grboxMarca_Categoria.Controls.Add(this.comboBoxAgregarArtCategoria);
+            this.grboxMarca_Categoria.Controls.Add(this.comboBoxAgregarArtMarca);
             this.grboxMarca_Categoria.Controls.Add(this.labAgregarMarca);
             this.grboxMarca_Categoria.Controls.Add(this.labCategoria);
             this.grboxMarca_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,31 +236,32 @@
             this.grboxMarca_Categoria.Text = "Marca y Categoría";
             this.grboxMarca_Categoria.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
-            // comboBoxAgregarCategoria
+            // comboBoxAgregarArtCategoria
             // 
-            this.comboBoxAgregarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.comboBoxAgregarArtCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxAgregarCategoria.FormattingEnabled = true;
-            this.comboBoxAgregarCategoria.Location = new System.Drawing.Point(124, 81);
-            this.comboBoxAgregarCategoria.Name = "comboBoxAgregarCategoria";
-            this.comboBoxAgregarCategoria.Size = new System.Drawing.Size(237, 21);
-            this.comboBoxAgregarCategoria.TabIndex = 1;
-            this.comboBoxAgregarCategoria.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarCategoria_SelectedIndexChanged);
+            this.comboBoxAgregarArtCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAgregarArtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAgregarArtCategoria.FormattingEnabled = true;
+            this.comboBoxAgregarArtCategoria.Location = new System.Drawing.Point(124, 81);
+            this.comboBoxAgregarArtCategoria.Name = "comboBoxAgregarArtCategoria";
+            this.comboBoxAgregarArtCategoria.Size = new System.Drawing.Size(237, 21);
+            this.comboBoxAgregarArtCategoria.TabIndex = 1;
             // 
-            // comboBoxAgregarMarca
+            // comboBoxAgregarArtMarca
             // 
-            this.comboBoxAgregarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.comboBoxAgregarArtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxAgregarMarca.FormattingEnabled = true;
-            this.comboBoxAgregarMarca.Location = new System.Drawing.Point(124, 34);
-            this.comboBoxAgregarMarca.Name = "comboBoxAgregarMarca";
-            this.comboBoxAgregarMarca.Size = new System.Drawing.Size(237, 21);
-            this.comboBoxAgregarMarca.TabIndex = 0;
-            this.comboBoxAgregarMarca.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarMarca_SelectedIndexChanged);
+            this.comboBoxAgregarArtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAgregarArtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAgregarArtMarca.FormattingEnabled = true;
+            this.comboBoxAgregarArtMarca.Location = new System.Drawing.Point(124, 34);
+            this.comboBoxAgregarArtMarca.Name = "comboBoxAgregarArtMarca";
+            this.comboBoxAgregarArtMarca.Size = new System.Drawing.Size(237, 21);
+            this.comboBoxAgregarArtMarca.TabIndex = 0;
+            this.comboBoxAgregarArtMarca.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgregarArtMarca_SelectedIndexChanged);
             // 
             // labAgregarMarca
             // 
@@ -442,8 +443,8 @@
         private System.Windows.Forms.Button btnExaminarImagen;
         private System.Windows.Forms.GroupBox grboxMarca_Categoria;
         private System.Windows.Forms.GroupBox grbAtributosArt;
-        private System.Windows.Forms.ComboBox comboBoxAgregarCategoria;
-        private System.Windows.Forms.ComboBox comboBoxAgregarMarca;
+        private System.Windows.Forms.ComboBox comboBoxAgregarArtCategoria;
+        private System.Windows.Forms.ComboBox comboBoxAgregarArtMarca;
         private System.Windows.Forms.Label labAgregarMarca;
         private System.Windows.Forms.Label labCategoria;
         private System.Windows.Forms.Button btnCargarImagen;

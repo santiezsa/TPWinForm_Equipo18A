@@ -19,6 +19,28 @@ namespace WinForms
             InitializeComponent();
         }
 
+        private void frmAgregar_Load(object sender, EventArgs e)
+        {
+            MarcasNegocio marcasNegocio = new MarcasNegocio();
+            CategoriasNegocio categoriasNegocio = new CategoriasNegocio();
+
+            try
+            {
+                comboBoxAgregarArtMarca.DataSource = marcasNegocio.listar();
+                comboBoxAgregarArtMarca.DisplayMember = "Descripcion";
+                comboBoxAgregarArtMarca.ValueMember = "Id";
+
+
+                comboBoxAgregarArtCategoria.DataSource = categoriasNegocio.listar();
+                comboBoxAgregarArtCategoria.DisplayMember = "Descripcion";
+                comboBoxAgregarArtCategoria.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -94,15 +116,6 @@ namespace WinForms
 
         }
 
-        private void comboBoxAgregarMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxAgregarCategoria_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
@@ -130,6 +143,11 @@ namespace WinForms
         }
 
         private void btnCargarArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAgregarArtMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

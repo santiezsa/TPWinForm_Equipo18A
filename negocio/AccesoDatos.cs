@@ -33,6 +33,11 @@ namespace negocio
             comando.CommandText = consulta;
         }
 
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
@@ -43,6 +48,7 @@ namespace negocio
             }
             catch (Exception ex)
             {
+                conexion.Close();
                 throw ex;
             }
         }
@@ -50,8 +56,10 @@ namespace negocio
         public void cerrarConexion()
         {
             if (lector != null)
+            {
                 lector.Close();
-            conexion.Close();
+                conexion.Close();
+            }
         }
     }
 }

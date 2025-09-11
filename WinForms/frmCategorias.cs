@@ -39,5 +39,10 @@ namespace WinForms
         {
 
         }
+
+        private void dgvCategoriasBis_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

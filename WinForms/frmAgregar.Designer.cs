@@ -415,6 +415,7 @@
             this.Name = "frmAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.grboxDetalleArt.ResumeLayout(false);
             this.grboxDetalleArt.PerformLayout();
             this.grboxMarca_Categoria.ResumeLayout(false);

@@ -88,7 +88,7 @@ namespace WinForms
             ventana.ShowDialog();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             frmAgregar ventana = new frmAgregar();
             ventana.ShowDialog();

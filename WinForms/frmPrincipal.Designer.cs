@@ -138,7 +138,7 @@
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(23, 22);
             this.btnAgregarArticulo.Text = "Agregar";
-            this.btnAgregarArticulo.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
             // btnModificarArticulo
             // 

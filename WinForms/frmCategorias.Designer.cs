@@ -116,6 +116,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCategorias";
             this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.frmCategorias_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.grbAdmCategorias.ResumeLayout(false);

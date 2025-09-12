@@ -109,8 +109,6 @@ namespace negocio
                 datos.setearParametro("@Precio", articulo.Precio);
                 datos.ejecutarAccion();
 
-                // Obtener el ID del articulo recien insertado
-                datos.setearConsulta("SELECT SCOPE_IDENTITY()");
                 int nuevoIdArticulo = Convert.ToInt32(datos.ejecutarLecturaScalar());
 
                 // Insertar las imagenes asociadas al articulo

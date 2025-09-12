@@ -157,6 +157,12 @@ namespace WinForms
                 articulo.Categoria = (Categoria)comboBoxAgregarArtCategoria.SelectedItem;
 
                 // TODO: Falta agregar este metodo en ArticuloNegocio
+                articulo.Imagenes = new List<Imagen>();
+
+                Imagen imagen = new Imagen();
+                imagen.Url = tbxUrlImagen.Text;
+                articulo.Imagenes.Add(imagen);
+
                 negocio.agregar(articulo);
                 MessageBox.Show("Articulo agregado exitosamente.");
                 Close();

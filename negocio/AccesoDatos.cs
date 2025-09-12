@@ -53,11 +53,49 @@ namespace negocio
             }
         }
 
+        public void ejecutarAccion()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
         public void cerrarConexion()
         {
             if (lector != null)
             {
                 lector.Close();
+                conexion.Close();
+            }
+        }
+
+        // Ejecuta la consulta y devuelve el valor de primera fila y primera columna
+
+        public object ejecutarLecturaScalar()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                return comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
                 conexion.Close();
             }
         }

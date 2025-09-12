@@ -119,7 +119,7 @@ namespace WinForms
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
-
+            cargarImagen(tbxUrlImagen.Text);
         }
 
         private void picBoxArt_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace WinForms
 
         private void btnCancelarCargaArt_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void grboxVistaPreviaImg_Enter(object sender, EventArgs e)
@@ -172,6 +172,23 @@ namespace WinForms
         private void comboBoxAgregarArtMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                picBoxArt.Load(imagen);
+            }
+            catch(Exception)
+            {
+                picBoxArt.Load("https://www.rubymaejewelry.com/wp-content/uploads/2010/07/placeholder.jpg");
+            }
+        }
+
+        private void tbxUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(tbxUrlImagen.Text);
         }
     }
 }

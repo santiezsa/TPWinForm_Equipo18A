@@ -75,10 +75,12 @@ namespace negocio
                 while (datos.Lector.Read())
                 {
                     Imagen aux = new Imagen();
-                    //aux.Id = (int)lector["Id"];
-                    //aux.IdArticulo = (int)lector["IdArticulo"];
-                    aux.Url = (string)datos.Lector["ImagenUrl"];
-                    lista.Add(aux);
+                    // VALIDACION NULL
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    {
+                        aux.Url = (string)datos.Lector["ImagenUrl"];
+                        lista.Add(aux);
+                    }
                 }
                 return lista;
             }
@@ -95,7 +97,39 @@ namespace negocio
         // INSERT DE DATOS SIMPLES Y CON CATEGORIAS Y MARCAS
         public void agregar(Articulo articulo)
         {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                datos.setearParametro("@Codigo", articulo.Codigo);
+                datos.setearParametro("@Nombre", articulo.Nombre);
+                datos.setearParametro("@Descripcion", articulo.Descripcion);
+                datos.setearParametro("@IdMarca", articulo.Marca.Id);
+                datos.setearParametro("@IdCategoria", articulo.Categoria.Id);
+                datos.setearParametro("@Precio", articulo.Precio);
+                datos.ejecutarAccion();
 
+                // Obtener el ID del articulo recien insertado
+                datos.setearConsulta("SELECT SCOPE_IDENTITY()");
+                int nuevoIdArticulo = Convert.ToInt32(datos.ejecutarLecturaScalar());
+
+                // Insertar las imagenes asociadas al articulo
+                foreach (var imagen in articulo.Imagenes)
+                {
+                    datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
+                    datos.setearParametro("@IdArticulo", nuevoIdArticulo);
+                    datos.setearParametro("@ImagenUrl", imagen.Url);
+                    datos.ejecutarAccion();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }

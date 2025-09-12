@@ -20,14 +20,13 @@ namespace WinForms
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        { 
 
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            dgvArticulos.DataSource = negocio.listar();
+            cargar();
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,7 +66,15 @@ namespace WinForms
 
         private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                dgvArticulos.DataSource = negocio.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
 
@@ -86,6 +93,19 @@ namespace WinForms
         {
             frmCategorias ventana = new frmCategorias();
             ventana.ShowDialog();
+        }
+
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                dgvArticulos.DataSource = negocio.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)

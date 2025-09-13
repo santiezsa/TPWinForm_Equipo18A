@@ -21,19 +21,26 @@ namespace WinForms
 
         private void frmMarcas_Load(object sender, EventArgs e)
         {
-            MarcasNegocio negocio = new MarcasNegocio();
-            dgvMarcas.DataSource = negocio.listar();
+            cargarMarca();
         }
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
             frmAgregarMarca agregarMarca = new frmAgregarMarca();
             agregarMarca.ShowDialog();
+            cargarMarca();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cargarMarca()
+        {
+            MarcasNegocio negocio = new MarcasNegocio();
+            dgvMarcas.DataSource = negocio.listar();
         }
     }
 }

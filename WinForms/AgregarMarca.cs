@@ -33,12 +33,11 @@ namespace WinForms
             try
             { 
                 marca.Descripcion = txbAgregarDescricionMarca.Text;
-
                 negocio.agregar(marca);
                 MessageBox.Show("Marca agregada exitosamente.");
                 Close();
             }
-                        catch (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }

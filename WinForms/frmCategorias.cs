@@ -21,13 +21,14 @@ namespace WinForms
 
         private void frmCategorias_Load(object sender, EventArgs e)
         {
-            CategoriasNegocio negocio = new CategoriasNegocio();
-            dgvCategorias.DataSource = negocio.listar();
+            cargarCategoria();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            frmAgregarCategoria agregarCategoria = new frmAgregarCategoria();
+            agregarCategoria.ShowDialog();
+            cargarCategoria();
         }
 
         private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +44,12 @@ namespace WinForms
         private void dgvCategoriasBis_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cargarCategoria()
+        {
+            CategoriasNegocio negocio = new CategoriasNegocio();
+            dgvCategorias.DataSource = negocio.listar();
         }
     }
 }

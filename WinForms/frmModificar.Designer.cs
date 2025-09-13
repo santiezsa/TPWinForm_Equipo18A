@@ -30,11 +30,9 @@
         {
             this.btnModificarArt = new System.Windows.Forms.Button();
             this.grboxVistaPreviaImg = new System.Windows.Forms.GroupBox();
-            this.picBoxArt = new System.Windows.Forms.PictureBox();
-            this.btnModificarImagen = new System.Windows.Forms.Button();
+            this.picBoxArtModificar = new System.Windows.Forms.PictureBox();
             this.grboxImagenArt = new System.Windows.Forms.GroupBox();
             this.labAgregarImagen = new System.Windows.Forms.Label();
-            this.btnModificarExaminarImagen = new System.Windows.Forms.Button();
             this.grbModificarAtributosArt = new System.Windows.Forms.GroupBox();
             this.grboxMarca_Categoria = new System.Windows.Forms.GroupBox();
             this.comboBoxModificarCategoria = new System.Windows.Forms.ComboBox();
@@ -51,8 +49,10 @@
             this.tbxModificarNombre = new System.Windows.Forms.TextBox();
             this.labModificarDescripcion = new System.Windows.Forms.Label();
             this.btnCancelarModificacionArt = new System.Windows.Forms.Button();
+            this.tbxUrlImagenModificar = new System.Windows.Forms.TextBox();
+            this.btnModificarImagen = new System.Windows.Forms.Button();
             this.grboxVistaPreviaImg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxArtModificar)).BeginInit();
             this.grboxImagenArt.SuspendLayout();
             this.grbModificarAtributosArt.SuspendLayout();
             this.grboxMarca_Categoria.SuspendLayout();
@@ -73,13 +73,14 @@
             this.btnModificarArt.TabIndex = 16;
             this.btnModificarArt.Text = "Modificar artículo";
             this.btnModificarArt.UseVisualStyleBackColor = false;
+            this.btnModificarArt.Click += new System.EventHandler(this.btnModificarArt_Click);
             // 
             // grboxVistaPreviaImg
             // 
             this.grboxVistaPreviaImg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grboxVistaPreviaImg.Controls.Add(this.picBoxArt);
+            this.grboxVistaPreviaImg.Controls.Add(this.picBoxArtModificar);
             this.grboxVistaPreviaImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grboxVistaPreviaImg.Location = new System.Drawing.Point(17, 480);
             this.grboxVistaPreviaImg.Name = "grboxVistaPreviaImg";
@@ -88,30 +89,18 @@
             this.grboxVistaPreviaImg.TabStop = false;
             this.grboxVistaPreviaImg.Text = "Vista previa";
             // 
-            // picBoxArt
+            // picBoxArtModificar
             // 
-            this.picBoxArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.picBoxArtModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxArt.BackColor = System.Drawing.Color.Silver;
-            this.picBoxArt.Location = new System.Drawing.Point(24, 53);
-            this.picBoxArt.Name = "picBoxArt";
-            this.picBoxArt.Size = new System.Drawing.Size(322, 173);
-            this.picBoxArt.TabIndex = 12;
-            this.picBoxArt.TabStop = false;
-            // 
-            // btnModificarImagen
-            // 
-            this.btnModificarImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarImagen.Location = new System.Drawing.Point(126, 33);
-            this.btnModificarImagen.Name = "btnModificarImagen";
-            this.btnModificarImagen.Size = new System.Drawing.Size(121, 36);
-            this.btnModificarImagen.TabIndex = 1;
-            this.btnModificarImagen.Text = "Cargar";
-            this.btnModificarImagen.UseVisualStyleBackColor = true;
+            this.picBoxArtModificar.BackColor = System.Drawing.Color.Silver;
+            this.picBoxArtModificar.Location = new System.Drawing.Point(24, 53);
+            this.picBoxArtModificar.Name = "picBoxArtModificar";
+            this.picBoxArtModificar.Size = new System.Drawing.Size(322, 173);
+            this.picBoxArtModificar.TabIndex = 12;
+            this.picBoxArtModificar.TabStop = false;
+            this.picBoxArtModificar.Click += new System.EventHandler(this.picBoxArt_Click);
             // 
             // grboxImagenArt
             // 
@@ -119,8 +108,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grboxImagenArt.Controls.Add(this.btnModificarImagen);
+            this.grboxImagenArt.Controls.Add(this.tbxUrlImagenModificar);
             this.grboxImagenArt.Controls.Add(this.labAgregarImagen);
-            this.grboxImagenArt.Controls.Add(this.btnModificarExaminarImagen);
             this.grboxImagenArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grboxImagenArt.Location = new System.Drawing.Point(0, 377);
             this.grboxImagenArt.Name = "grboxImagenArt";
@@ -142,19 +131,6 @@
             this.labAgregarImagen.TabIndex = 8;
             this.labAgregarImagen.Text = "Imagen:";
             this.labAgregarImagen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnModificarExaminarImagen
-            // 
-            this.btnModificarExaminarImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificarExaminarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarExaminarImagen.Location = new System.Drawing.Point(240, 33);
-            this.btnModificarExaminarImagen.Name = "btnModificarExaminarImagen";
-            this.btnModificarExaminarImagen.Size = new System.Drawing.Size(121, 36);
-            this.btnModificarExaminarImagen.TabIndex = 0;
-            this.btnModificarExaminarImagen.Text = "Examinar...";
-            this.btnModificarExaminarImagen.UseVisualStyleBackColor = true;
             // 
             // grbModificarAtributosArt
             // 
@@ -375,6 +351,23 @@
             this.btnCancelarModificacionArt.Text = "Cancelar";
             this.btnCancelarModificacionArt.UseVisualStyleBackColor = false;
             // 
+            // tbxUrlImagenModificar
+            // 
+            this.tbxUrlImagenModificar.Location = new System.Drawing.Point(124, 35);
+            this.tbxUrlImagenModificar.Name = "tbxUrlImagenModificar";
+            this.tbxUrlImagenModificar.Size = new System.Drawing.Size(237, 20);
+            this.tbxUrlImagenModificar.TabIndex = 9;
+            // 
+            // btnModificarImagen
+            // 
+            this.btnModificarImagen.Location = new System.Drawing.Point(124, 61);
+            this.btnModificarImagen.Name = "btnModificarImagen";
+            this.btnModificarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarImagen.TabIndex = 10;
+            this.btnModificarImagen.Text = "Cargar";
+            this.btnModificarImagen.UseVisualStyleBackColor = true;
+            this.btnModificarImagen.Click += new System.EventHandler(this.btnModificarImagen_Click);
+            // 
             // frmModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,8 +384,9 @@
             this.Name = "frmModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
+            this.Load += new System.EventHandler(this.frmModificar_Load);
             this.grboxVistaPreviaImg.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxArtModificar)).EndInit();
             this.grboxImagenArt.ResumeLayout(false);
             this.grboxImagenArt.PerformLayout();
             this.grbModificarAtributosArt.ResumeLayout(false);
@@ -408,11 +402,9 @@
 
         private System.Windows.Forms.Button btnModificarArt;
         private System.Windows.Forms.GroupBox grboxVistaPreviaImg;
-        private System.Windows.Forms.PictureBox picBoxArt;
-        private System.Windows.Forms.Button btnModificarImagen;
+        private System.Windows.Forms.PictureBox picBoxArtModificar;
         private System.Windows.Forms.GroupBox grboxImagenArt;
         private System.Windows.Forms.Label labAgregarImagen;
-        private System.Windows.Forms.Button btnModificarExaminarImagen;
         private System.Windows.Forms.GroupBox grbModificarAtributosArt;
         private System.Windows.Forms.GroupBox grboxMarca_Categoria;
         private System.Windows.Forms.ComboBox comboBoxModificarCategoria;
@@ -429,5 +421,7 @@
         private System.Windows.Forms.TextBox tbxModificarNombre;
         private System.Windows.Forms.Label labModificarDescripcion;
         private System.Windows.Forms.Button btnCancelarModificacionArt;
+        private System.Windows.Forms.TextBox tbxUrlImagenModificar;
+        private System.Windows.Forms.Button btnModificarImagen;
     }
 }

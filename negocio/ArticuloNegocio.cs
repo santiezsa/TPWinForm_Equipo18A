@@ -128,5 +128,46 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void modificar(Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            AccesoDatos datosImagenes = new AccesoDatos();
+
+            try
+            {
+                // 1. Actualiza los datos del artículo principal.
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id");
+                datos.setearParametro("@Codigo", articulo.Codigo);
+                datos.setearParametro("@Nombre", articulo.Nombre);
+                datos.setearParametro("@Descripcion", articulo.Descripcion);
+                datos.setearParametro("@IdMarca", articulo.Marca.Id);
+                datos.setearParametro("@IdCategoria", articulo.Categoria.Id);
+                datos.setearParametro("@Precio", articulo.Precio);
+                datos.setearParametro("@Id", articulo.Id);
+                datos.ejecutarAccion();
+                datos.cerrarConexion();
+
+                foreach (var imagen in articulo.Imagenes)
+                {
+                    // Actualiza la imagen existente
+                    AccesoDatos datosUpdateImagen = new AccesoDatos();
+                    datosUpdateImagen.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = @Id");
+                    datosUpdateImagen.setearParametro("@ImagenUrl", imagen.Url);
+                    datosUpdateImagen.setearParametro("@Id", imagen.Id);
+                    datosUpdateImagen.ejecutarAccion();
+                    datosUpdateImagen.cerrarConexion();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

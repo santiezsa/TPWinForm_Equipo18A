@@ -121,7 +121,11 @@ namespace WinForms
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
+            Articulo articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
+            frmModificar frmModificar = new frmModificar(articuloSeleccionado);
+            frmModificar.ShowDialog();
+            return;
         }
 
         private void btnVerArticulo_Click(object sender, EventArgs e)

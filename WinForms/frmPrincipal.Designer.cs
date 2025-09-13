@@ -173,6 +173,7 @@
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
             this.btnEliminarArticulo.Size = new System.Drawing.Size(23, 22);
             this.btnEliminarArticulo.Text = "Eliminar";
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
             // dgvArticulos
             // 

@@ -165,9 +165,15 @@ namespace negocio
 
         public void eliminar(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
+                // Elimino imagenes asociadas al articulo
+                datos.setearConsulta("DELETE FROM Imagenes WHERE IDArticulo = @IDArticulo");
+                datos.setearParametro("@IDArticulo", id);
+                datos.ejecutarAccion();
+
+                // Elimino articulo               
                 datos.setearConsulta("delete from ARTICULOS where id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
@@ -175,6 +181,10 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

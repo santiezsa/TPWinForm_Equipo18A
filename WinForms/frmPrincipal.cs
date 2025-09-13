@@ -112,6 +112,7 @@ namespace WinForms
         {
             frmAgregar ventana = new frmAgregar();
             ventana.ShowDialog();
+            cargar();
         }
 
         private void tablaArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -125,6 +126,7 @@ namespace WinForms
 
             frmModificar frmModificar = new frmModificar(articuloSeleccionado);
             frmModificar.ShowDialog();
+            cargar();
             return;
         }
 

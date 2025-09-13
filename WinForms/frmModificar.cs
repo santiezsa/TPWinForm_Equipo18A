@@ -45,10 +45,14 @@ namespace WinForms
                 articulo.Marca = (Marca)comboBoxModificarMarca.SelectedItem;
                 articulo.Categoria = (Categoria)comboBoxModificarCategoria.SelectedItem;
 
-                articulo.Imagenes.Clear();
-                Imagen nuevaImagen = new Imagen();
-                nuevaImagen.Url = tbxUrlImagenModificar.Text;
-                articulo.Imagenes.Add(nuevaImagen);
+                // Actualizar la URL de la imagen existente
+                if (articulo.Imagenes.Count > 0)
+                {
+                    articulo.Imagenes[0].Url = tbxUrlImagenModificar.Text;
+                }
+
+
+
                 negocio.modificar(articulo);
                 MessageBox.Show("Modificado exitosamente");
                 this.Close();
@@ -58,6 +62,7 @@ namespace WinForms
                 MessageBox.Show(ex.ToString());
             }
         }
+
 
         private void frmModificar_Load(object sender, EventArgs e)
         {

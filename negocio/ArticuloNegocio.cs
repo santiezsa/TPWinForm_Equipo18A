@@ -132,11 +132,9 @@ namespace negocio
         public void modificar(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();
-            AccesoDatos datosImagenes = new AccesoDatos();
-
             try
             {
-                // 1. Actualiza los datos del artículo principal.
+                // Actualizar los datos del articulo principal
                 datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id");
                 datos.setearParametro("@Codigo", articulo.Codigo);
                 datos.setearParametro("@Nombre", articulo.Nombre);
@@ -148,25 +146,20 @@ namespace negocio
                 datos.ejecutarAccion();
                 datos.cerrarConexion();
 
-                foreach (var imagen in articulo.Imagenes)
+                // Actualizar nuevas imagenes
+                if (articulo.Imagenes.Count > 0)
                 {
-                    // Actualiza la imagen existente
-                    AccesoDatos datosUpdateImagen = new AccesoDatos();
-                    datosUpdateImagen.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = @Id");
-                    datosUpdateImagen.setearParametro("@ImagenUrl", imagen.Url);
-                    datosUpdateImagen.setearParametro("@Id", imagen.Id);
-                    datosUpdateImagen.ejecutarAccion();
-                    datosUpdateImagen.cerrarConexion();
-
+                    AccesoDatos datosImagen = new AccesoDatos();
+                    datosImagen.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @IdArticulo");
+                    datosImagen.setearParametro("@ImagenUrl", articulo.Imagenes[0].Url);
+                    datosImagen.setearParametro("@IdArticulo", articulo.Id);
+                    datosImagen.ejecutarAccion();
+                    datosImagen.cerrarConexion();
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
             }
         }
 

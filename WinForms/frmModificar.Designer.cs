@@ -32,6 +32,8 @@
             this.grboxVistaPreviaImg = new System.Windows.Forms.GroupBox();
             this.picBoxArtModificar = new System.Windows.Forms.PictureBox();
             this.grboxImagenArt = new System.Windows.Forms.GroupBox();
+            this.btnModificarImagen = new System.Windows.Forms.Button();
+            this.tbxUrlImagenModificar = new System.Windows.Forms.TextBox();
             this.labAgregarImagen = new System.Windows.Forms.Label();
             this.grbModificarAtributosArt = new System.Windows.Forms.GroupBox();
             this.grboxMarca_Categoria = new System.Windows.Forms.GroupBox();
@@ -49,8 +51,6 @@
             this.tbxModificarNombre = new System.Windows.Forms.TextBox();
             this.labModificarDescripcion = new System.Windows.Forms.Label();
             this.btnCancelarModificacionArt = new System.Windows.Forms.Button();
-            this.tbxUrlImagenModificar = new System.Windows.Forms.TextBox();
-            this.btnModificarImagen = new System.Windows.Forms.Button();
             this.grboxVistaPreviaImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArtModificar)).BeginInit();
             this.grboxImagenArt.SuspendLayout();
@@ -98,6 +98,7 @@
             this.picBoxArtModificar.Location = new System.Drawing.Point(24, 53);
             this.picBoxArtModificar.Name = "picBoxArtModificar";
             this.picBoxArtModificar.Size = new System.Drawing.Size(322, 173);
+            this.picBoxArtModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxArtModificar.TabIndex = 12;
             this.picBoxArtModificar.TabStop = false;
             this.picBoxArtModificar.Click += new System.EventHandler(this.picBoxArt_Click);
@@ -117,6 +118,23 @@
             this.grboxImagenArt.TabIndex = 12;
             this.grboxImagenArt.TabStop = false;
             this.grboxImagenArt.Text = "Imagen del artículo";
+            // 
+            // btnModificarImagen
+            // 
+            this.btnModificarImagen.Location = new System.Drawing.Point(124, 61);
+            this.btnModificarImagen.Name = "btnModificarImagen";
+            this.btnModificarImagen.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarImagen.TabIndex = 10;
+            this.btnModificarImagen.Text = "Cargar";
+            this.btnModificarImagen.UseVisualStyleBackColor = true;
+            this.btnModificarImagen.Click += new System.EventHandler(this.btnModificarImagen_Click);
+            // 
+            // tbxUrlImagenModificar
+            // 
+            this.tbxUrlImagenModificar.Location = new System.Drawing.Point(124, 35);
+            this.tbxUrlImagenModificar.Name = "tbxUrlImagenModificar";
+            this.tbxUrlImagenModificar.Size = new System.Drawing.Size(237, 20);
+            this.tbxUrlImagenModificar.TabIndex = 9;
             // 
             // labAgregarImagen
             // 
@@ -350,23 +368,6 @@
             this.btnCancelarModificacionArt.TabIndex = 18;
             this.btnCancelarModificacionArt.Text = "Cancelar";
             this.btnCancelarModificacionArt.UseVisualStyleBackColor = false;
-            // 
-            // tbxUrlImagenModificar
-            // 
-            this.tbxUrlImagenModificar.Location = new System.Drawing.Point(124, 35);
-            this.tbxUrlImagenModificar.Name = "tbxUrlImagenModificar";
-            this.tbxUrlImagenModificar.Size = new System.Drawing.Size(237, 20);
-            this.tbxUrlImagenModificar.TabIndex = 9;
-            // 
-            // btnModificarImagen
-            // 
-            this.btnModificarImagen.Location = new System.Drawing.Point(124, 61);
-            this.btnModificarImagen.Name = "btnModificarImagen";
-            this.btnModificarImagen.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarImagen.TabIndex = 10;
-            this.btnModificarImagen.Text = "Cargar";
-            this.btnModificarImagen.UseVisualStyleBackColor = true;
-            this.btnModificarImagen.Click += new System.EventHandler(this.btnModificarImagen_Click);
             // 
             // frmModificar
             // 

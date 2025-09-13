@@ -173,5 +173,16 @@ namespace WinForms
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> listaFiltrada;
+
+            listaFiltrada = negocio.listar().FindAll(x => x.Nombre == txtFiltro.Text);
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+        }
     }
 }

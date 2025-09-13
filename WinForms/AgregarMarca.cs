@@ -32,11 +32,11 @@ namespace WinForms
 
             try
             { 
-                marca.Id = int.Parse(txbAgregarIdMarca.Text);
                 marca.Descripcion = txbAgregarDescricionMarca.Text;
 
                 negocio.agregar(marca);
                 MessageBox.Show("Marca agregada exitosamente.");
+                Close();
             }
                         catch (Exception ex)
             {

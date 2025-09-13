@@ -45,12 +45,9 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into Marcas (Id, Descripcion) Values (@Id, @Descripcion)");
-                datos.setearParametro("@Id", nueva.Id);
+                datos.setearConsulta("Insert into Marcas (Descripcion) Values (@Descripcion)");
                 datos.setearParametro("@Descripcion", nueva.Descripcion);
                 datos.ejecutarAccion();
-
-                datos.setearConsulta("SELECT SCOPE_IDENTITY()");
             }
             catch (Exception ex)
             {

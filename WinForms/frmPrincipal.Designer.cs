@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,28 +37,28 @@
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tlsPrincipal = new System.Windows.Forms.ToolStrip();
             this.btnAgregarArticulo = new System.Windows.Forms.ToolStripButton();
             this.btnModificarArticulo = new System.Windows.Forms.ToolStripButton();
             this.btnVerArticulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminarArticulo = new System.Windows.Forms.ToolStripButton();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.menuPrincipal.SuspendLayout();
+            this.tlsPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuPrincipal
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.artículosToolStripMenuItem,
             this.herramientasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(904, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.menuPrincipal.Name = "menuPrincipal";
+            this.menuPrincipal.Size = new System.Drawing.Size(904, 24);
+            this.menuPrincipal.TabIndex = 0;
+            this.menuPrincipal.Text = "menuStrip1";
             // 
             // artículosToolStripMenuItem
             // 
@@ -116,19 +116,19 @@
             this.categoríasToolStripMenuItem.Text = "Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
-            // toolStrip1
+            // tlsPrincipal
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAgregarArticulo,
             this.btnModificarArticulo,
             this.btnVerArticulo,
             this.toolStripSeparator1,
             this.btnEliminarArticulo});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(904, 25);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tlsPrincipal.Location = new System.Drawing.Point(0, 24);
+            this.tlsPrincipal.Name = "tlsPrincipal";
+            this.tlsPrincipal.Size = new System.Drawing.Size(904, 25);
+            this.tlsPrincipal.TabIndex = 4;
+            this.tlsPrincipal.Text = "toolStrip1";
             // 
             // btnAgregarArticulo
             // 
@@ -192,19 +192,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 722);
             this.Controls.Add(this.dgvArticulos);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tlsPrincipal);
+            this.Controls.Add(this.menuPrincipal);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuPrincipal;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo - UTN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuPrincipal.ResumeLayout(false);
+            this.menuPrincipal.PerformLayout();
+            this.tlsPrincipal.ResumeLayout(false);
+            this.tlsPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,7 +213,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuPrincipal;
         private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verArtículoToolStripMenuItem;
@@ -221,7 +221,7 @@
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoríasToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tlsPrincipal;
         private System.Windows.Forms.ToolStripButton btnAgregarArticulo;
         private System.Windows.Forms.ToolStripButton btnModificarArticulo;
         private System.Windows.Forms.ToolStripButton btnVerArticulo;

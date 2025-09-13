@@ -27,7 +27,8 @@ namespace WinForms
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-
+            frmAgregarMarca agregarMarca = new frmAgregarMarca();
+            agregarMarca.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -35,23 +35,23 @@
             this.labVerNombre = new System.Windows.Forms.Label();
             this.tbxVerDescripcion = new System.Windows.Forms.TextBox();
             this.tbxVerNombre = new System.Windows.Forms.TextBox();
-            this.grboxDetalleVerArt = new System.Windows.Forms.GroupBox();
+            this.grbDetalleVerArt = new System.Windows.Forms.GroupBox();
             this.labVerDescripcion = new System.Windows.Forms.Label();
             this.labVerMarca = new System.Windows.Forms.Label();
             this.labVerCategoria = new System.Windows.Forms.Label();
-            this.grboxMarca_Categoria = new System.Windows.Forms.GroupBox();
+            this.grbMarca_Categoria = new System.Windows.Forms.GroupBox();
             this.tbxVerCategoria = new System.Windows.Forms.TextBox();
             this.tbxVerMarca = new System.Windows.Forms.TextBox();
             this.labVerImagen = new System.Windows.Forms.Label();
-            this.grboxImagenArt = new System.Windows.Forms.GroupBox();
+            this.grbImagenArt = new System.Windows.Forms.GroupBox();
+            this.pbxArtVer = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.picBoxArtVer = new System.Windows.Forms.PictureBox();
             this.grbVerAtributosArt = new System.Windows.Forms.GroupBox();
             this.btnAdelante = new System.Windows.Forms.Button();
-            this.grboxDetalleVerArt.SuspendLayout();
-            this.grboxMarca_Categoria.SuspendLayout();
-            this.grboxImagenArt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxArtVer)).BeginInit();
+            this.grbDetalleVerArt.SuspendLayout();
+            this.grbMarca_Categoria.SuspendLayout();
+            this.grbImagenArt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArtVer)).BeginInit();
             this.grbVerAtributosArt.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,26 +145,26 @@
             this.tbxVerNombre.Size = new System.Drawing.Size(237, 20);
             this.tbxVerNombre.TabIndex = 2;
             // 
-            // grboxDetalleVerArt
+            // grbDetalleVerArt
             // 
-            this.grboxDetalleVerArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grbDetalleVerArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grboxDetalleVerArt.Controls.Add(this.labVerCodigo);
-            this.grboxDetalleVerArt.Controls.Add(this.tbxVerPrecio);
-            this.grboxDetalleVerArt.Controls.Add(this.tbxVerCodigo);
-            this.grboxDetalleVerArt.Controls.Add(this.lblVerPrecio);
-            this.grboxDetalleVerArt.Controls.Add(this.labVerNombre);
-            this.grboxDetalleVerArt.Controls.Add(this.tbxVerDescripcion);
-            this.grboxDetalleVerArt.Controls.Add(this.tbxVerNombre);
-            this.grboxDetalleVerArt.Controls.Add(this.labVerDescripcion);
-            this.grboxDetalleVerArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grboxDetalleVerArt.Location = new System.Drawing.Point(0, 28);
-            this.grboxDetalleVerArt.Name = "grboxDetalleVerArt";
-            this.grboxDetalleVerArt.Size = new System.Drawing.Size(383, 356);
-            this.grboxDetalleVerArt.TabIndex = 8;
-            this.grboxDetalleVerArt.TabStop = false;
-            this.grboxDetalleVerArt.Text = "Detalle del artículo";
+            this.grbDetalleVerArt.Controls.Add(this.labVerCodigo);
+            this.grbDetalleVerArt.Controls.Add(this.tbxVerPrecio);
+            this.grbDetalleVerArt.Controls.Add(this.tbxVerCodigo);
+            this.grbDetalleVerArt.Controls.Add(this.lblVerPrecio);
+            this.grbDetalleVerArt.Controls.Add(this.labVerNombre);
+            this.grbDetalleVerArt.Controls.Add(this.tbxVerDescripcion);
+            this.grbDetalleVerArt.Controls.Add(this.tbxVerNombre);
+            this.grbDetalleVerArt.Controls.Add(this.labVerDescripcion);
+            this.grbDetalleVerArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDetalleVerArt.Location = new System.Drawing.Point(0, 28);
+            this.grbDetalleVerArt.Name = "grbDetalleVerArt";
+            this.grbDetalleVerArt.Size = new System.Drawing.Size(383, 356);
+            this.grbDetalleVerArt.TabIndex = 8;
+            this.grbDetalleVerArt.TabStop = false;
+            this.grbDetalleVerArt.Text = "Detalle del artículo";
             // 
             // labVerDescripcion
             // 
@@ -208,22 +208,22 @@
             this.labVerCategoria.Text = "Categoria:";
             this.labVerCategoria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // grboxMarca_Categoria
+            // grbMarca_Categoria
             // 
-            this.grboxMarca_Categoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grbMarca_Categoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grboxMarca_Categoria.Controls.Add(this.tbxVerCategoria);
-            this.grboxMarca_Categoria.Controls.Add(this.tbxVerMarca);
-            this.grboxMarca_Categoria.Controls.Add(this.labVerMarca);
-            this.grboxMarca_Categoria.Controls.Add(this.labVerCategoria);
-            this.grboxMarca_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grboxMarca_Categoria.Location = new System.Drawing.Point(0, 260);
-            this.grboxMarca_Categoria.Name = "grboxMarca_Categoria";
-            this.grboxMarca_Categoria.Size = new System.Drawing.Size(383, 118);
-            this.grboxMarca_Categoria.TabIndex = 10;
-            this.grboxMarca_Categoria.TabStop = false;
-            this.grboxMarca_Categoria.Text = "Marca y Categoría";
+            this.grbMarca_Categoria.Controls.Add(this.tbxVerCategoria);
+            this.grbMarca_Categoria.Controls.Add(this.tbxVerMarca);
+            this.grbMarca_Categoria.Controls.Add(this.labVerMarca);
+            this.grbMarca_Categoria.Controls.Add(this.labVerCategoria);
+            this.grbMarca_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbMarca_Categoria.Location = new System.Drawing.Point(0, 260);
+            this.grbMarca_Categoria.Name = "grbMarca_Categoria";
+            this.grbMarca_Categoria.Size = new System.Drawing.Size(383, 118);
+            this.grbMarca_Categoria.TabIndex = 10;
+            this.grbMarca_Categoria.TabStop = false;
+            this.grbMarca_Categoria.Text = "Marca y Categoría";
             // 
             // tbxVerCategoria
             // 
@@ -263,20 +263,33 @@
             this.labVerImagen.Text = "Imagen:";
             this.labVerImagen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // grboxImagenArt
+            // grbImagenArt
             // 
-            this.grboxImagenArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grbImagenArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grboxImagenArt.Controls.Add(this.picBoxArtVer);
-            this.grboxImagenArt.Controls.Add(this.labVerImagen);
-            this.grboxImagenArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grboxImagenArt.Location = new System.Drawing.Point(0, 377);
-            this.grboxImagenArt.Name = "grboxImagenArt";
-            this.grboxImagenArt.Size = new System.Drawing.Size(383, 334);
-            this.grboxImagenArt.TabIndex = 12;
-            this.grboxImagenArt.TabStop = false;
-            this.grboxImagenArt.Text = "Imagen del artículo";
+            this.grbImagenArt.Controls.Add(this.pbxArtVer);
+            this.grbImagenArt.Controls.Add(this.labVerImagen);
+            this.grbImagenArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbImagenArt.Location = new System.Drawing.Point(0, 377);
+            this.grbImagenArt.Name = "grbImagenArt";
+            this.grbImagenArt.Size = new System.Drawing.Size(383, 334);
+            this.grbImagenArt.TabIndex = 12;
+            this.grbImagenArt.TabStop = false;
+            this.grbImagenArt.Text = "Imagen del artículo";
+            // 
+            // pbxArtVer
+            // 
+            this.pbxArtVer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxArtVer.BackColor = System.Drawing.Color.Silver;
+            this.pbxArtVer.Location = new System.Drawing.Point(24, 64);
+            this.pbxArtVer.Name = "pbxArtVer";
+            this.pbxArtVer.Size = new System.Drawing.Size(322, 248);
+            this.pbxArtVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArtVer.TabIndex = 12;
+            this.pbxArtVer.TabStop = false;
             // 
             // btnAtras
             // 
@@ -288,27 +301,14 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // picBoxArtVer
-            // 
-            this.picBoxArtVer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxArtVer.BackColor = System.Drawing.Color.Silver;
-            this.picBoxArtVer.Location = new System.Drawing.Point(24, 64);
-            this.picBoxArtVer.Name = "picBoxArtVer";
-            this.picBoxArtVer.Size = new System.Drawing.Size(322, 248);
-            this.picBoxArtVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxArtVer.TabIndex = 12;
-            this.picBoxArtVer.TabStop = false;
-            // 
             // grbVerAtributosArt
             // 
             this.grbVerAtributosArt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbVerAtributosArt.Controls.Add(this.grboxImagenArt);
-            this.grbVerAtributosArt.Controls.Add(this.grboxMarca_Categoria);
-            this.grbVerAtributosArt.Controls.Add(this.grboxDetalleVerArt);
+            this.grbVerAtributosArt.Controls.Add(this.grbImagenArt);
+            this.grbVerAtributosArt.Controls.Add(this.grbMarca_Categoria);
+            this.grbVerAtributosArt.Controls.Add(this.grbDetalleVerArt);
             this.grbVerAtributosArt.Location = new System.Drawing.Point(17, 17);
             this.grbVerAtributosArt.Name = "grbVerAtributosArt";
             this.grbVerAtributosArt.Size = new System.Drawing.Size(383, 711);
@@ -342,13 +342,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver";
             this.Load += new System.EventHandler(this.frmVerArticulo_Load);
-            this.grboxDetalleVerArt.ResumeLayout(false);
-            this.grboxDetalleVerArt.PerformLayout();
-            this.grboxMarca_Categoria.ResumeLayout(false);
-            this.grboxMarca_Categoria.PerformLayout();
-            this.grboxImagenArt.ResumeLayout(false);
-            this.grboxImagenArt.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxArtVer)).EndInit();
+            this.grbDetalleVerArt.ResumeLayout(false);
+            this.grbDetalleVerArt.PerformLayout();
+            this.grbMarca_Categoria.ResumeLayout(false);
+            this.grbMarca_Categoria.PerformLayout();
+            this.grbImagenArt.ResumeLayout(false);
+            this.grbImagenArt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArtVer)).EndInit();
             this.grbVerAtributosArt.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -363,14 +363,14 @@
         private System.Windows.Forms.Label labVerNombre;
         private System.Windows.Forms.TextBox tbxVerDescripcion;
         private System.Windows.Forms.TextBox tbxVerNombre;
-        private System.Windows.Forms.GroupBox grboxDetalleVerArt;
+        private System.Windows.Forms.GroupBox grbDetalleVerArt;
         private System.Windows.Forms.Label labVerDescripcion;
         private System.Windows.Forms.Label labVerMarca;
         private System.Windows.Forms.Label labVerCategoria;
-        private System.Windows.Forms.GroupBox grboxMarca_Categoria;
+        private System.Windows.Forms.GroupBox grbMarca_Categoria;
         private System.Windows.Forms.Label labVerImagen;
-        private System.Windows.Forms.GroupBox grboxImagenArt;
-        private System.Windows.Forms.PictureBox picBoxArtVer;
+        private System.Windows.Forms.GroupBox grbImagenArt;
+        private System.Windows.Forms.PictureBox pbxArtVer;
         private System.Windows.Forms.GroupBox grbVerAtributosArt;
         private System.Windows.Forms.TextBox tbxVerCategoria;
         private System.Windows.Forms.TextBox tbxVerMarca;

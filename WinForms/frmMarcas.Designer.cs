@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMarcas));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tlsMarca = new System.Windows.Forms.ToolStrip();
             this.btnAgregarMarca = new System.Windows.Forms.ToolStripButton();
             this.btnModificarMarca = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminarMarca = new System.Windows.Forms.ToolStripButton();
             this.grbAdmMarcas = new System.Windows.Forms.GroupBox();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            this.toolStrip1.SuspendLayout();
+            this.tlsMarca.SuspendLayout();
             this.grbAdmMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // tlsMarca
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsMarca.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAgregarMarca,
             this.btnModificarMarca,
             this.toolStripSeparator1,
             this.btnEliminarMarca});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(304, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tlsMarca.Location = new System.Drawing.Point(0, 0);
+            this.tlsMarca.Name = "tlsMarca";
+            this.tlsMarca.Size = new System.Drawing.Size(304, 25);
+            this.tlsMarca.TabIndex = 2;
+            this.tlsMarca.Text = "toolStrip1";
             // 
             // btnAgregarMarca
             // 
@@ -112,13 +112,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 478);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.tlsMarca);
             this.Controls.Add(this.grbAdmMarcas);
             this.Name = "frmMarcas";
             this.Text = "Marcas";
             this.Load += new System.EventHandler(this.frmMarcas_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.tlsMarca.ResumeLayout(false);
+            this.tlsMarca.PerformLayout();
             this.grbAdmMarcas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
@@ -127,7 +127,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tlsMarca;
         private System.Windows.Forms.ToolStripButton btnAgregarMarca;
         private System.Windows.Forms.ToolStripButton btnModificarMarca;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

@@ -56,11 +56,11 @@ namespace WinForms
         {
             try
             {
-                picBoxArtVer.Load(imagen);
+                pbxArtVer.Load(imagen);
             }
             catch (Exception)
             {
-                picBoxArtVer.Load("https://www.rubymaejewelry.com/wp-content/uploads/2010/07/placeholder.jpg");
+                pbxArtVer.Load("https://www.rubymaejewelry.com/wp-content/uploads/2010/07/placeholder.jpg");
             }
         }
 

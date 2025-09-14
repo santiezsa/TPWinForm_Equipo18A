@@ -15,9 +15,17 @@ namespace WinForms
 {
     public partial class frmAgregarCategoria : Form
     {
+        private Categoria categoria = null;
         public frmAgregarCategoria()
         {
             InitializeComponent();
+        }
+
+        public frmAgregarCategoria(Categoria categoria)
+        {
+            InitializeComponent();
+            this.categoria = categoria;
+            Text = "Modificar Categoría";
         }
 
         private void txbAgregarCategoria_TextChanged(object sender, EventArgs e)
@@ -37,19 +45,41 @@ namespace WinForms
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
-            Categoria categoria = new Categoria();
             CategoriasNegocio negocio = new CategoriasNegocio();
 
             try
             {
+                if (categoria == null)
+                {
+                    categoria = new Categoria();
+                }
+
                 categoria.Descripcion = txbAgregarCategoria.Text;
-                negocio.agregar(categoria);
-                MessageBox.Show("Categoría agregada exitosamente.");
+                
+                if(categoria.Id != 0)
+                {
+                    negocio.modificar(categoria);
+                    MessageBox.Show("Modificación exitosa");
+                }
+                else
+                {
+                    negocio.agregar(categoria);
+                    MessageBox.Show("Agregado exitosamente");
+                }
+
+
                 Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+        private void frmAgregarCategoria_Load(object sender, EventArgs e)
+        {
+            if (categoria != null)
+            {
+                txbAgregarCategoria.Text = categoria.Descripcion;
             }
         }
     }

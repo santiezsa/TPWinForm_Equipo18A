@@ -36,6 +36,7 @@
             this.btnEliminarCategoria = new System.Windows.Forms.ToolStripButton();
             this.grbAdmCategorias = new System.Windows.Forms.GroupBox();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.btnCerrarCategorias = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.grbAdmCategorias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
@@ -62,7 +63,7 @@
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(23, 22);
             this.btnAgregarCategoria.Text = "Agregar";
-            this.btnAgregarCategoria.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // btnModificarCategoria
             // 
@@ -72,6 +73,7 @@
             this.btnModificarCategoria.Name = "btnModificarCategoria";
             this.btnModificarCategoria.Size = new System.Drawing.Size(23, 22);
             this.btnModificarCategoria.Text = "Modificar";
+            this.btnModificarCategoria.Click += new System.EventHandler(this.btnModificarCategoria_Click);
             // 
             // toolStripSeparator1
             // 
@@ -92,7 +94,7 @@
             this.grbAdmCategorias.Controls.Add(this.dgvCategorias);
             this.grbAdmCategorias.Location = new System.Drawing.Point(12, 39);
             this.grbAdmCategorias.Name = "grbAdmCategorias";
-            this.grbAdmCategorias.Size = new System.Drawing.Size(267, 415);
+            this.grbAdmCategorias.Size = new System.Drawing.Size(280, 396);
             this.grbAdmCategorias.TabIndex = 1;
             this.grbAdmCategorias.TabStop = false;
             this.grbAdmCategorias.Text = "Categorias";
@@ -102,19 +104,30 @@
             // 
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvCategorias.Location = new System.Drawing.Point(6, 36);
+            this.dgvCategorias.Location = new System.Drawing.Point(18, 36);
             this.dgvCategorias.MultiSelect = false;
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(254, 189);
+            this.dgvCategorias.Size = new System.Drawing.Size(245, 325);
             this.dgvCategorias.TabIndex = 0;
             this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentClick);
+            // 
+            // btnCerrarCategorias
+            // 
+            this.btnCerrarCategorias.Location = new System.Drawing.Point(93, 444);
+            this.btnCerrarCategorias.Name = "btnCerrarCategorias";
+            this.btnCerrarCategorias.Size = new System.Drawing.Size(106, 22);
+            this.btnCerrarCategorias.TabIndex = 2;
+            this.btnCerrarCategorias.Text = "Cerrar";
+            this.btnCerrarCategorias.UseVisualStyleBackColor = true;
+            this.btnCerrarCategorias.Click += new System.EventHandler(this.btnCerrarCategorias_Click);
             // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 478);
+            this.Controls.Add(this.btnCerrarCategorias);
             this.Controls.Add(this.grbAdmCategorias);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCategorias";
@@ -138,5 +151,6 @@
         private System.Windows.Forms.ToolStripButton btnEliminarCategoria;
         private System.Windows.Forms.GroupBox grbAdmCategorias;
         private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.Button btnCerrarCategorias;
     }
 }

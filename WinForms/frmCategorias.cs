@@ -24,7 +24,7 @@ namespace WinForms
             cargarCategoria();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
             frmAgregarCategoria agregarCategoria = new frmAgregarCategoria();
             agregarCategoria.ShowDialog();
@@ -50,6 +50,20 @@ namespace WinForms
         {
             CategoriasNegocio negocio = new CategoriasNegocio();
             dgvCategorias.DataSource = negocio.listar();
+        }
+
+        private void btnModificarCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionado;
+            seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+            frmAgregarCategoria modificar = new frmAgregarCategoria(seleccionado);
+            modificar.ShowDialog();
+            cargarCategoria();
+        }
+
+        private void btnCerrarCategorias_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

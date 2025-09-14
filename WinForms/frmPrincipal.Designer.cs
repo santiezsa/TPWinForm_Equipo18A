@@ -197,6 +197,7 @@
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(61, 13);
             this.lblFiltro.TabIndex = 8;
+            this.lblFiltro.Tag = "";
             this.lblFiltro.Text = "Filtro rapido";
             // 
             // txtFiltro

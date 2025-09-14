@@ -229,6 +229,17 @@ namespace WinForms
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                if (cboCampo.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Seleccione un campo para filtrar.");
+                    return;
+                }
+                if (cboCriterio.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Seleccione un criterio para filtrar.");
+                    return;
+                }
+
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = tbxFiltroAvanzado.Text;

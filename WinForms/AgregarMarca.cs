@@ -15,9 +15,32 @@ namespace WinForms
 {
     public partial class frmAgregarMarca : Form
     {
+        private Marca marca = null;
         public frmAgregarMarca()
         {
             InitializeComponent();
+        }
+
+        public frmAgregarMarca(Marca marca)
+        {
+            InitializeComponent();
+            this.marca = marca;
+            Text = "Modificar Marca";
+        }
+
+        private void frmAgregarMarca_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (marca != null)
+                {
+                    txbAgregarDescricionMarca.Text = marca.Descripcion;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnCancelarMarca_Click(object sender, EventArgs e)
@@ -27,15 +50,28 @@ namespace WinForms
 
         private void btnAceptarMarca_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca();
             MarcasNegocio negocio = new MarcasNegocio();
 
             try
-            { 
+            {
+                if (marca == null)
+                {
+                    marca = new Marca();
+                }
+
                 marca.Descripcion = txbAgregarDescricionMarca.Text;
-                negocio.agregar(marca);
-                MessageBox.Show("Marca agregada exitosamente.");
-                Close();
+
+                if (marca.Id != 0)
+                {
+                    negocio.modificarMarca(marca);
+                    MessageBox.Show("Marca modificada exitosamente.");
+                }
+                else
+                {
+                    negocio.agregar(marca);
+                    MessageBox.Show("Marca agregada exitosamente.");
+                }
+                    Close();
             }
             catch (Exception ex)
             {

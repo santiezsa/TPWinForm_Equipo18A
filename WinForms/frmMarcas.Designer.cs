@@ -36,6 +36,7 @@
             this.btnEliminarMarca = new System.Windows.Forms.ToolStripButton();
             this.grbAdmMarcas = new System.Windows.Forms.GroupBox();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.btnCerrarVentanaMarcas = new System.Windows.Forms.Button();
             this.tlsMarca.SuspendLayout();
             this.grbAdmMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
@@ -72,6 +73,7 @@
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(23, 22);
             this.btnModificarMarca.Text = "Modificar";
+            this.btnModificarMarca.Click += new System.EventHandler(this.btnModificarMarca_Click);
             // 
             // toolStripSeparator1
             // 
@@ -90,10 +92,11 @@
             // 
             // grbAdmMarcas
             // 
+            this.grbAdmMarcas.Controls.Add(this.btnCerrarVentanaMarcas);
             this.grbAdmMarcas.Controls.Add(this.dgvMarcas);
             this.grbAdmMarcas.Location = new System.Drawing.Point(13, 49);
             this.grbAdmMarcas.Name = "grbAdmMarcas";
-            this.grbAdmMarcas.Size = new System.Drawing.Size(267, 415);
+            this.grbAdmMarcas.Size = new System.Drawing.Size(279, 415);
             this.grbAdmMarcas.TabIndex = 1;
             this.grbAdmMarcas.TabStop = false;
             this.grbAdmMarcas.Text = "Marcas";
@@ -102,13 +105,23 @@
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcas.Location = new System.Drawing.Point(7, 33);
+            this.dgvMarcas.Location = new System.Drawing.Point(17, 33);
             this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(254, 189);
+            this.dgvMarcas.Size = new System.Drawing.Size(243, 331);
             this.dgvMarcas.TabIndex = 0;
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnCerrarVentanaMarcas
+            // 
+            this.btnCerrarVentanaMarcas.Location = new System.Drawing.Point(93, 379);
+            this.btnCerrarVentanaMarcas.Name = "btnCerrarVentanaMarcas";
+            this.btnCerrarVentanaMarcas.Size = new System.Drawing.Size(93, 26);
+            this.btnCerrarVentanaMarcas.TabIndex = 1;
+            this.btnCerrarVentanaMarcas.Text = "Cerrar";
+            this.btnCerrarVentanaMarcas.UseVisualStyleBackColor = true;
+            this.btnCerrarVentanaMarcas.Click += new System.EventHandler(this.btnCerrarVentanaMarcas_Click);
             // 
             // frmMarcas
             // 
@@ -137,5 +150,6 @@
         private System.Windows.Forms.ToolStripButton btnEliminarMarca;
         private System.Windows.Forms.GroupBox grbAdmMarcas;
         private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.Button btnCerrarVentanaMarcas;
     }
 }

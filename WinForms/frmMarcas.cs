@@ -42,5 +42,20 @@ namespace WinForms
             MarcasNegocio negocio = new MarcasNegocio();
             dgvMarcas.DataSource = negocio.listar();
         }
+
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+            Marca seleccionado;
+            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+
+            frmAgregarMarca modificar = new frmAgregarMarca(seleccionado);
+            modificar.ShowDialog();
+            cargarMarca();
+        }
+
+        private void btnCerrarVentanaMarcas_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

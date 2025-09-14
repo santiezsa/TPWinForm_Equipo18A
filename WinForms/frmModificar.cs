@@ -31,12 +31,41 @@ namespace WinForms
 
         }
 
+        private bool ValidarCampos()
+        {
+            // Valido campos no vacios
+            if (string.IsNullOrEmpty(tbxModificarCodigo.Text))
+            {
+                MessageBox.Show("El campo Código no puede estar vacío.");
+                return false;
+            }
+
+            if (!decimal.TryParse(tbxModificarCodigo.Text, out _))
+            {
+                MessageBox.Show("El precio ingresado no es un número válido.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbxModificarCodigo.Text))
+            {
+                MessageBox.Show("El campo Nombre es obligatorio.");
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnModificarArt_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
+                if (!ValidarCampos())
+                {
+                    return;
+                }
+
                 // Modifico el articulo
                 articulo.Codigo = tbxModificarCodigo.Text;
                 articulo.Nombre = tbxModificarNombre.Text;

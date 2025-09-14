@@ -54,6 +54,12 @@ namespace WinForms
 
             try
             {
+                if(string.IsNullOrWhiteSpace(txbAgregarDescricionMarca.Text))
+                {
+                    MessageBox.Show("La descripción no puede estar vacía.");
+                    return;
+                }
+                
                 if (marca == null)
                 {
                     marca = new Marca();

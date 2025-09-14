@@ -142,6 +142,30 @@ namespace WinForms
 
         }
 
+        private bool ValidarCampos()
+        {
+            // Valido campos no vacios
+            if (string.IsNullOrEmpty(tbxAgregarCodigo.Text))
+            {
+                MessageBox.Show("El campo Código no puede estar vacío.");
+                return false;
+            }
+
+            if (!decimal.TryParse(tbxAgregarPrecio.Text, out _))
+            {
+                MessageBox.Show("El precio ingresado no es un número válido.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbxAgregarNombre.Text))
+            {
+                MessageBox.Show("El campo Nombre es obligatorio.");
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnCargarArt_Click(object sender, EventArgs e)
         {
             Articulo articulo = new Articulo();
@@ -149,14 +173,17 @@ namespace WinForms
 
             try
             {
+                if(!ValidarCampos())
+                {
+                    return;
+                }
+
                 articulo.Codigo = tbxAgregarCodigo.Text;
                 articulo.Precio = decimal.Parse(tbxAgregarPrecio.Text);
                 articulo.Nombre = tbxAgregarNombre.Text;
                 articulo.Descripcion = tbxAgregarDescripcion.Text;
                 articulo.Marca = (Marca)comboBoxAgregarArtMarca.SelectedItem;
                 articulo.Categoria = (Categoria)comboBoxAgregarArtCategoria.SelectedItem;
-
-                // TODO: Falta agregar este metodo en ArticuloNegocio
                 articulo.Imagenes = new List<Imagen>();
 
                 Imagen imagen = new Imagen();

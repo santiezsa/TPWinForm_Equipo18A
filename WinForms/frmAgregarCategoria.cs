@@ -49,6 +49,12 @@ namespace WinForms
 
             try
             {
+                if (string.IsNullOrWhiteSpace(txbAgregarCategoria.Text))
+                {
+                    MessageBox.Show("La descripción no puede estar vacía.");
+                    return;
+                }
+
                 if (categoria == null)
                 {
                     categoria = new Categoria();

@@ -239,6 +239,14 @@ namespace WinForms
                     MessageBox.Show("Seleccione un criterio para filtrar.");
                     return;
                 }
+                if(cboCampo.SelectedItem.ToString() == "Precio")
+                {
+                    if(!decimal.TryParse(tbxFiltroAvanzado.Text, out _))
+                    {
+                        MessageBox.Show("Para filtrar por precio ingrese un valor numérico.");
+                        return;
+                    }
+                }
 
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();

@@ -57,5 +57,25 @@ namespace WinForms
         {
             Close();
         }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            MarcasNegocio marcasNegocio = new MarcasNegocio();
+            Marca seleccionado;
+            try
+                {
+                DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar la marca?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    marcasNegocio.eliminar(seleccionado.Id);
+                    cargarMarca();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

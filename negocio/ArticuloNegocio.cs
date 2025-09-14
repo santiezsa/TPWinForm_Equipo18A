@@ -194,5 +194,131 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Articulo> filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos(); 
+            try
+            {
+                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Id AS IdMarca, M.Descripcion AS Marca, C.Id AS IdCategoria, C.Descripcion AS Categoria, (SELECT TOP 1 I.ImagenUrl FROM IMAGENES I WHERE I.IdArticulo = A.Id ORDER BY I.Id ASC) AS Imagen FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE ";
+                switch (campo)
+                {
+                    case "Código":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "A.Codigo LIKE '" + filtro + "%'";
+                                break;
+                            case "Termina con":
+                                consulta += "A.Codigo LIKE '%" + filtro + "'";
+                                break;
+                            case "Contiene":
+                                consulta += "A.Codigo LIKE '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Nombre":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "A.Nombre LIKE '" + filtro + "%'";
+                                break;
+                            case "Termina con":
+                                consulta += "A.Nombre LIKE '%" + filtro + "'";
+                                break;
+                            case "Contiene":
+                                consulta += "A.Nombre LIKE '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Descripción":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "A.Descripcion LIKE '" + filtro + "%'";
+                                break;
+                            case "Termina con":
+                                consulta += "A.Descripcion LIKE '%" + filtro + "'";
+                                break;
+                            case "Contiene":
+                                consulta += "A.Descripcion LIKE '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Marca":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "M.Descripcion LIKE '" + filtro + "%'";
+                                break;
+                            case "Termina con":
+                                consulta += "M.Descripcion LIKE '%" + filtro + "'";
+                                break;
+                            case "Contiene":
+                                consulta += "M.Descripcion LIKE '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Categoría":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "C.Descripcion LIKE '" + filtro + "%'";
+                                break;
+                            case "Termina con":
+                                consulta += "C.Descripcion LIKE '%" + filtro + "'";
+                                break;
+                            case "Contiene":
+                                consulta += "C.Descripcion LIKE '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Precio":
+                        switch (criterio)
+                        {
+                            case "Mayor a":
+                                consulta += "A.Precio > " + filtro;
+                                break;
+                            case "Menor a":
+                                consulta += "A.Precio < " + filtro;
+                                break;
+                            case "Igual a":
+                                consulta += "A.Precio = " + filtro;
+                                break;
+                        }
+                        break;
+                }
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"]; // traigo ID de marca para modificar/eliminar
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"]; // traigo ID de categoria para modificar/eliminar
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+
+                    aux.Imagenes = this.listarImagenes(aux.Id);
+                    lista.Add(aux);
+                }
+                return lista;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

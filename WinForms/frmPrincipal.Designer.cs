@@ -46,6 +46,13 @@
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.btnFiltroAvanzado = new System.Windows.Forms.Button();
+            this.lblFiltroCampo = new System.Windows.Forms.Label();
+            this.lblCriterio = new System.Windows.Forms.Label();
+            this.lblFlitroAvanzado = new System.Windows.Forms.Label();
+            this.cboCampo = new System.Windows.Forms.ComboBox();
+            this.cboCriterio = new System.Windows.Forms.ComboBox();
+            this.tbxFiltroAvanzado = new System.Windows.Forms.TextBox();
             this.menuPrincipal.SuspendLayout();
             this.tlsPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
@@ -58,7 +65,7 @@
             this.herramientasToolStripMenuItem});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(904, 24);
+            this.menuPrincipal.Size = new System.Drawing.Size(789, 24);
             this.menuPrincipal.TabIndex = 0;
             this.menuPrincipal.Text = "menuStrip1";
             // 
@@ -128,7 +135,7 @@
             this.btnEliminarArticulo});
             this.tlsPrincipal.Location = new System.Drawing.Point(0, 24);
             this.tlsPrincipal.Name = "tlsPrincipal";
-            this.tlsPrincipal.Size = new System.Drawing.Size(904, 25);
+            this.tlsPrincipal.Size = new System.Drawing.Size(789, 25);
             this.tlsPrincipal.TabIndex = 4;
             this.tlsPrincipal.Text = "toolStrip1";
             // 
@@ -202,17 +209,89 @@
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(96, 70);
+            this.txtFiltro.Location = new System.Drawing.Point(111, 70);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(237, 20);
             this.txtFiltro.TabIndex = 9;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
+            // btnFiltroAvanzado
+            // 
+            this.btnFiltroAvanzado.Location = new System.Drawing.Point(650, 453);
+            this.btnFiltroAvanzado.Name = "btnFiltroAvanzado";
+            this.btnFiltroAvanzado.Size = new System.Drawing.Size(97, 27);
+            this.btnFiltroAvanzado.TabIndex = 11;
+            this.btnFiltroAvanzado.Text = "Buscar";
+            this.btnFiltroAvanzado.UseVisualStyleBackColor = true;
+            this.btnFiltroAvanzado.Click += new System.EventHandler(this.btnFiltroAvanzado_Click);
+            // 
+            // lblFiltroCampo
+            // 
+            this.lblFiltroCampo.AutoSize = true;
+            this.lblFiltroCampo.Location = new System.Drawing.Point(71, 460);
+            this.lblFiltroCampo.Name = "lblFiltroCampo";
+            this.lblFiltroCampo.Size = new System.Drawing.Size(43, 13);
+            this.lblFiltroCampo.TabIndex = 12;
+            this.lblFiltroCampo.Text = "Campo:";
+            // 
+            // lblCriterio
+            // 
+            this.lblCriterio.AutoSize = true;
+            this.lblCriterio.Location = new System.Drawing.Point(260, 460);
+            this.lblCriterio.Name = "lblCriterio";
+            this.lblCriterio.Size = new System.Drawing.Size(42, 13);
+            this.lblCriterio.TabIndex = 13;
+            this.lblCriterio.Text = "Criterio:";
+            // 
+            // lblFlitroAvanzado
+            // 
+            this.lblFlitroAvanzado.AutoSize = true;
+            this.lblFlitroAvanzado.Location = new System.Drawing.Point(465, 460);
+            this.lblFlitroAvanzado.Name = "lblFlitroAvanzado";
+            this.lblFlitroAvanzado.Size = new System.Drawing.Size(29, 13);
+            this.lblFlitroAvanzado.TabIndex = 14;
+            this.lblFlitroAvanzado.Text = "Filtro";
+            // 
+            // cboCampo
+            // 
+            this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCampo.FormattingEnabled = true;
+            this.cboCampo.IntegralHeight = false;
+            this.cboCampo.ItemHeight = 13;
+            this.cboCampo.Location = new System.Drawing.Point(120, 457);
+            this.cboCampo.Name = "cboCampo";
+            this.cboCampo.Size = new System.Drawing.Size(110, 21);
+            this.cboCampo.TabIndex = 15;
+            this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
+            // 
+            // cboCriterio
+            // 
+            this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCriterio.FormattingEnabled = true;
+            this.cboCriterio.Location = new System.Drawing.Point(308, 457);
+            this.cboCriterio.Name = "cboCriterio";
+            this.cboCriterio.Size = new System.Drawing.Size(110, 21);
+            this.cboCriterio.TabIndex = 16;
+            // 
+            // tbxFiltroAvanzado
+            // 
+            this.tbxFiltroAvanzado.Location = new System.Drawing.Point(500, 457);
+            this.tbxFiltroAvanzado.Name = "tbxFiltroAvanzado";
+            this.tbxFiltroAvanzado.Size = new System.Drawing.Size(110, 20);
+            this.tbxFiltroAvanzado.TabIndex = 17;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 722);
+            this.ClientSize = new System.Drawing.Size(789, 511);
+            this.Controls.Add(this.tbxFiltroAvanzado);
+            this.Controls.Add(this.cboCriterio);
+            this.Controls.Add(this.cboCampo);
+            this.Controls.Add(this.lblFlitroAvanzado);
+            this.Controls.Add(this.lblCriterio);
+            this.Controls.Add(this.lblFiltroCampo);
+            this.Controls.Add(this.btnFiltroAvanzado);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.dgvArticulos);
@@ -254,6 +333,13 @@
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.Button btnFiltroAvanzado;
+        private System.Windows.Forms.Label lblFiltroCampo;
+        private System.Windows.Forms.Label lblCriterio;
+        private System.Windows.Forms.Label lblFlitroAvanzado;
+        private System.Windows.Forms.ComboBox cboCampo;
+        private System.Windows.Forms.ComboBox cboCriterio;
+        private System.Windows.Forms.TextBox tbxFiltroAvanzado;
     }
 }
 

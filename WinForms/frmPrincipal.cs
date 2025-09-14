@@ -178,8 +178,16 @@ namespace WinForms
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Articulo> listaFiltrada;
+            string filtro = txtFiltro.Text;
 
-            listaFiltrada = negocio.listar().FindAll(x => x.Nombre == txtFiltro.Text);
+            if(filtro != "")
+            {
+                listaFiltrada = negocio.listar().FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = negocio.listar();  
+            }
 
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;

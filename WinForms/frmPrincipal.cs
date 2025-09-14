@@ -176,17 +176,22 @@ namespace WinForms
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
             ArticuloNegocio negocio = new ArticuloNegocio();
             List<Articulo> listaFiltrada;
             string filtro = txtFiltro.Text;
 
-            if(filtro != "")
+            if (filtro.Length >= 3)
             {
                 listaFiltrada = negocio.listar().FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()));
             }
             else
             {
-                listaFiltrada = negocio.listar();  
+                listaFiltrada = negocio.listar();
             }
 
             dgvArticulos.DataSource = null;

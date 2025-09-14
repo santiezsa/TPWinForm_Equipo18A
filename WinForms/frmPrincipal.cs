@@ -182,7 +182,7 @@ namespace WinForms
 
             if(filtro != "")
             {
-                listaFiltrada = negocio.listar().FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+                listaFiltrada = negocio.listar().FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()));
             }
             else
             {

@@ -88,6 +88,7 @@
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(23, 22);
             this.btnEliminarCategoria.Text = "Eliminar";
+            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
             // grbAdmCategorias
             // 

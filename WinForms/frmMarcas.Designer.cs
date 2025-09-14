@@ -35,8 +35,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminarMarca = new System.Windows.Forms.ToolStripButton();
             this.grbAdmMarcas = new System.Windows.Forms.GroupBox();
-            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.btnCerrarVentanaMarcas = new System.Windows.Forms.Button();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.tlsMarca.SuspendLayout();
             this.grbAdmMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
@@ -92,14 +92,23 @@
             // 
             // grbAdmMarcas
             // 
-            this.grbAdmMarcas.Controls.Add(this.btnCerrarVentanaMarcas);
             this.grbAdmMarcas.Controls.Add(this.dgvMarcas);
             this.grbAdmMarcas.Location = new System.Drawing.Point(13, 49);
             this.grbAdmMarcas.Name = "grbAdmMarcas";
-            this.grbAdmMarcas.Size = new System.Drawing.Size(279, 415);
+            this.grbAdmMarcas.Size = new System.Drawing.Size(279, 381);
             this.grbAdmMarcas.TabIndex = 1;
             this.grbAdmMarcas.TabStop = false;
             this.grbAdmMarcas.Text = "Marcas";
+            // 
+            // btnCerrarVentanaMarcas
+            // 
+            this.btnCerrarVentanaMarcas.Location = new System.Drawing.Point(101, 440);
+            this.btnCerrarVentanaMarcas.Name = "btnCerrarVentanaMarcas";
+            this.btnCerrarVentanaMarcas.Size = new System.Drawing.Size(93, 26);
+            this.btnCerrarVentanaMarcas.TabIndex = 1;
+            this.btnCerrarVentanaMarcas.Text = "Cerrar";
+            this.btnCerrarVentanaMarcas.UseVisualStyleBackColor = true;
+            this.btnCerrarVentanaMarcas.Click += new System.EventHandler(this.btnCerrarVentanaMarcas_Click);
             // 
             // dgvMarcas
             // 
@@ -113,21 +122,12 @@
             this.dgvMarcas.TabIndex = 0;
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnCerrarVentanaMarcas
-            // 
-            this.btnCerrarVentanaMarcas.Location = new System.Drawing.Point(93, 379);
-            this.btnCerrarVentanaMarcas.Name = "btnCerrarVentanaMarcas";
-            this.btnCerrarVentanaMarcas.Size = new System.Drawing.Size(93, 26);
-            this.btnCerrarVentanaMarcas.TabIndex = 1;
-            this.btnCerrarVentanaMarcas.Text = "Cerrar";
-            this.btnCerrarVentanaMarcas.UseVisualStyleBackColor = true;
-            this.btnCerrarVentanaMarcas.Click += new System.EventHandler(this.btnCerrarVentanaMarcas_Click);
-            // 
             // frmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 478);
+            this.Controls.Add(this.btnCerrarVentanaMarcas);
             this.Controls.Add(this.tlsMarca);
             this.Controls.Add(this.grbAdmMarcas);
             this.Name = "frmMarcas";

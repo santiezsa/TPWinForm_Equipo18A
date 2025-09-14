@@ -65,5 +65,26 @@ namespace WinForms
         {
             Close();
         }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            CategoriasNegocio negocio = new CategoriasNegocio();
+            Categoria seleccionado;
+            try
+                {
+                DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar la categoría?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargarCategoria();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }

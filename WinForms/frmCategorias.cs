@@ -54,6 +54,11 @@ namespace WinForms
 
         private void btnModificarCategoria_Click(object sender, EventArgs e)
         {
+            if (dgvCategorias.CurrentRow == null)
+            {
+                MessageBox.Show("No hay ninguna categoría seleccionada para modificar.");
+                return;
+            }
             Categoria seleccionado;
             seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
             frmAgregarCategoria modificar = new frmAgregarCategoria(seleccionado);
@@ -68,6 +73,11 @@ namespace WinForms
 
         private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
+            if (dgvCategorias.CurrentRow == null)
+            {
+                MessageBox.Show("No hay ninguna categoría seleccionada para eliminar.");
+                return;
+            }
             CategoriasNegocio negocio = new CategoriasNegocio();
             Categoria seleccionado;
             try

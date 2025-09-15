@@ -45,9 +45,14 @@ namespace WinForms
 
         private void btnModificarMarca_Click(object sender, EventArgs e)
         {
-            Marca seleccionado;
-            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+            if (dgvMarcas.CurrentRow == null)
+            {
+                MessageBox.Show("No hay ninguna marca seleccionada para modificar.");
+                return;
+            }
 
+            Marca seleccionado = new Marca();
+            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
             frmAgregarMarca modificar = new frmAgregarMarca(seleccionado);
             modificar.ShowDialog();
             cargarMarca();
@@ -60,6 +65,11 @@ namespace WinForms
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
+            if(dgvMarcas.CurrentRow == null)
+            {
+                MessageBox.Show("No hay ninguna marca seleccionada para eliminar.");
+                return;
+            }
             MarcasNegocio marcasNegocio = new MarcasNegocio();
             Marca seleccionado;
             try

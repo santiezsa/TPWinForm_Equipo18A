@@ -30,7 +30,7 @@ namespace WinForms
 
         private void txbAgregarCategoria_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lblDescripcionAgregarCategoria_Click(object sender, EventArgs e)
@@ -46,6 +46,7 @@ namespace WinForms
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
             CategoriasNegocio negocio = new CategoriasNegocio();
+            List<Categoria> categoriasExistentes = new List<Categoria>();
 
             try
             {
@@ -62,15 +63,32 @@ namespace WinForms
 
                 categoria.Descripcion = txbAgregarCategoria.Text;
                 
-                if(categoria.Id != 0)
+                try
                 {
-                    negocio.modificar(categoria);
-                    MessageBox.Show("Modificación exitosa");
+                    categoriasExistentes = negocio.listar();
+                    string descripcionIngresada = txbAgregarCategoria.Text.Trim();
+                    if (categoriasExistentes.Any(c => c.Descripcion.Equals(descripcionIngresada, StringComparison.OrdinalIgnoreCase) && (categoria == null || c.Id != categoria.Id)))
+                    {
+                        MessageBox.Show("Categoría repetida.");
+                        return;
+                    }
+                    else
+                    {
+                        if (categoria.Id != 0)
+                        {
+                            negocio.modificar(categoria);
+                            MessageBox.Show("Modificación exitosa");
+                        }
+                        else
+                        {
+                            negocio.agregar(categoria);
+                            MessageBox.Show("Agregado exitosamente");
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    negocio.agregar(categoria);
-                    MessageBox.Show("Agregado exitosamente");
+                    MessageBox.Show(ex.ToString());
                 }
 
 

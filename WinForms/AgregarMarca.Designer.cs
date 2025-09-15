@@ -83,7 +83,10 @@
             this.Controls.Add(this.btnAceptarMarca);
             this.Controls.Add(this.txbAgregarDescricionMarca);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(286, 185);
+            this.MinimumSize = new System.Drawing.Size(286, 185);
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Marca";

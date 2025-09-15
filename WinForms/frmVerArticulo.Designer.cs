@@ -334,6 +334,7 @@
             this.Controls.Add(this.btnAdelante);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.grbVerAtributosArt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(432, 835);
             this.MinimizeBox = false;

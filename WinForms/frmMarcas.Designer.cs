@@ -131,6 +131,9 @@
             this.Controls.Add(this.btnCerrarVentanaMarcas);
             this.Controls.Add(this.tlsMarca);
             this.Controls.Add(this.grbAdmMarcas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(320, 517);
+            this.MinimumSize = new System.Drawing.Size(320, 517);
             this.Name = "frmMarcas";
             this.Text = "Marcas";
             this.Load += new System.EventHandler(this.frmMarcas_Load);

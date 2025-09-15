@@ -57,6 +57,8 @@
             this.btnAgregarCategoria.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAgregarCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregarCategoria.Location = new System.Drawing.Point(37, 105);
+            this.btnAgregarCategoria.MaximumSize = new System.Drawing.Size(86, 24);
+            this.btnAgregarCategoria.MinimumSize = new System.Drawing.Size(86, 24);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(86, 24);
             this.btnAgregarCategoria.TabIndex = 2;
@@ -85,7 +87,10 @@
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.txbAgregarCategoria);
             this.Controls.Add(this.lblDescripcionAgregarCategoria);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(286, 185);
+            this.MinimumSize = new System.Drawing.Size(286, 185);
             this.Name = "frmAgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Categoria";

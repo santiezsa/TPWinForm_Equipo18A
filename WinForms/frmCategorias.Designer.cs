@@ -131,6 +131,9 @@
             this.Controls.Add(this.btnCerrarCategorias);
             this.Controls.Add(this.grbAdmCategorias);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(320, 517);
+            this.MinimumSize = new System.Drawing.Size(320, 517);
             this.Name = "frmCategorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);

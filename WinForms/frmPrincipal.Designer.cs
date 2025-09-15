@@ -297,12 +297,14 @@
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.tlsPrincipal);
             this.Controls.Add(this.menuPrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuPrincipal;
+            this.MaximumSize = new System.Drawing.Size(805, 550);
+            this.MinimumSize = new System.Drawing.Size(805, 550);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo - UTN";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();

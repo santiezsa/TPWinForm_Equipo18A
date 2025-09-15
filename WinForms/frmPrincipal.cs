@@ -172,21 +172,28 @@ namespace WinForms
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            Articulo seleccionado;
-            try
+            if (dgvArticulos.CurrentRow != null && dgvArticulos.Rows.Count > 0)
             {
-                DialogResult respuesta = MessageBox.Show("¿Eliminar articulo?", "Elimninando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta == DialogResult.Yes)
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                Articulo seleccionado;
+                try
                 {
-                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    negocio.eliminar(seleccionado.Id);
-                    cargar();
+                    DialogResult respuesta = MessageBox.Show("¿Eliminar articulo?", "Elimninando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                        negocio.eliminar(seleccionado.Id);
+                        cargar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("No hay artículos para eliminar.");
             }
         }
 
